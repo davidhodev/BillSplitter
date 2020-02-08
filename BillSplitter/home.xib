@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="BillSplitter" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController id="5W7-wi-tmy" customClass="ViewController" customModule="BillSplitter">
+            <view key="view" contentMode="scaleToFill" id="Oa8-xb-w5O">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_background" translatesAutoresizingMaskIntoConstraints="NO" id="hN2-HY-dCv" customClass="Ya">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="306"/>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                <constraints>
+                    <constraint firstItem="hN2-HY-dCv" firstAttribute="top" secondItem="Oa8-xb-w5O" secondAttribute="top" id="2iP-8X-X08"/>
+                    <constraint firstItem="hN2-HY-dCv" firstAttribute="leading" secondItem="Oa8-xb-w5O" secondAttribute="leading" id="BMm-DW-wAG"/>
+                    <constraint firstItem="ZWh-Cn-kZz" firstAttribute="trailing" secondItem="hN2-HY-dCv" secondAttribute="trailing" id="bvf-Kd-IIe"/>
+                </constraints>
+                <viewLayoutGuide key="safeArea" id="ZWh-Cn-kZz"/>
+            </view>
+            <point key="canvasLocation" x="370" y="68"/>
+        </viewController>
+    </objects>
+    <resources>
+        <image name="home_background" width="375" height="306"/>
+    </resources>
+</document>

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  homeViewController.swift
 //  BillSplitter
 //
 //  Created by David Ho on 2/8/20.
@@ -8,22 +8,19 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class homeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        self.view.backgroundColor = .red
     }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: "homeViewController", bundle: nil)
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
     }
     
 
 }
-
