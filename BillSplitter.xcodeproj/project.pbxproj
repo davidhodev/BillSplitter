@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DB3C32AA23EF2B5F0063ECCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3C32A923EF2B5F0063ECCC /* AppDelegate.swift */; };
+		DB3C32AC23EF2B5F0063ECCC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3C32AB23EF2B5F0063ECCC /* SceneDelegate.swift */; };
+		DB3C32AE23EF2B5F0063ECCC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3C32AD23EF2B5F0063ECCC /* ViewController.swift */; };
+		DB3C32B123EF2B5F0063ECCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB3C32AF23EF2B5F0063ECCC /* Main.storyboard */; };
+		DB3C32B323EF2B630063ECCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB3C32B223EF2B630063ECCC /* Assets.xcassets */; };
+		DB3C32B623EF2B630063ECCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB3C32B423EF2B630063ECCC /* LaunchScreen.storyboard */; };
+		DB3C32C123EF2B630063ECCC /* BillSplitterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3C32C023EF2B630063ECCC /* BillSplitterTests.swift */; };
+		DB3C32CC23EF2B630063ECCC /* BillSplitterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3C32CB23EF2B630063ECCC /* BillSplitterUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DB3C32BD23EF2B630063ECCC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB3C329E23EF2B5F0063ECCC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB3C32A523EF2B5F0063ECCC;
+			remoteInfo = BillSplitter;
+		};
+		DB3C32C823EF2B630063ECCC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB3C329E23EF2B5F0063ECCC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB3C32A523EF2B5F0063ECCC;
+			remoteInfo = BillSplitter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DB3C32A623EF2B5F0063ECCC /* BillSplitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BillSplitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB3C32A923EF2B5F0063ECCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DB3C32AB23EF2B5F0063ECCC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DB3C32AD23EF2B5F0063ECCC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DB3C32B023EF2B5F0063ECCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DB3C32B223EF2B630063ECCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DB3C32B523EF2B630063ECCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DB3C32B723EF2B630063ECCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB3C32BC23EF2B630063ECCC /* BillSplitterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BillSplitterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB3C32C023EF2B630063ECCC /* BillSplitterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillSplitterTests.swift; sourceTree = "<group>"; };
+		DB3C32C223EF2B630063ECCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB3C32C723EF2B630063ECCC /* BillSplitterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BillSplitterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB3C32CB23EF2B630063ECCC /* BillSplitterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillSplitterUITests.swift; sourceTree = "<group>"; };
+		DB3C32CD23EF2B630063ECCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DB3C32A323EF2B5F0063ECCC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB3C32B923EF2B630063ECCC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB3C32C423EF2B630063ECCC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DB3C329D23EF2B5F0063ECCC = {
+			isa = PBXGroup;
+			children = (
+				DB3C32A823EF2B5F0063ECCC /* BillSplitter */,
+				DB3C32BF23EF2B630063ECCC /* BillSplitterTests */,
+				DB3C32CA23EF2B630063ECCC /* BillSplitterUITests */,
+				DB3C32A723EF2B5F0063ECCC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DB3C32A723EF2B5F0063ECCC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DB3C32A623EF2B5F0063ECCC /* BillSplitter.app */,
+				DB3C32BC23EF2B630063ECCC /* BillSplitterTests.xctest */,
+				DB3C32C723EF2B630063ECCC /* BillSplitterUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DB3C32A823EF2B5F0063ECCC /* BillSplitter */ = {
+			isa = PBXGroup;
+			children = (
+				DB3C32A923EF2B5F0063ECCC /* AppDelegate.swift */,
+				DB3C32AB23EF2B5F0063ECCC /* SceneDelegate.swift */,
+				DB3C32AD23EF2B5F0063ECCC /* ViewController.swift */,
+				DB3C32AF23EF2B5F0063ECCC /* Main.storyboard */,
+				DB3C32B223EF2B630063ECCC /* Assets.xcassets */,
+				DB3C32B423EF2B630063ECCC /* LaunchScreen.storyboard */,
+				DB3C32B723EF2B630063ECCC /* Info.plist */,
+			);
+			path = BillSplitter;
+			sourceTree = "<group>";
+		};
+		DB3C32BF23EF2B630063ECCC /* BillSplitterTests */ = {
+			isa = PBXGroup;
+			children = (
+				DB3C32C023EF2B630063ECCC /* BillSplitterTests.swift */,
+				DB3C32C223EF2B630063ECCC /* Info.plist */,
+			);
+			path = BillSplitterTests;
+			sourceTree = "<group>";
+		};
+		DB3C32CA23EF2B630063ECCC /* BillSplitterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DB3C32CB23EF2B630063ECCC /* BillSplitterUITests.swift */,
+				DB3C32CD23EF2B630063ECCC /* Info.plist */,
+			);
+			path = BillSplitterUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DB3C32A523EF2B5F0063ECCC /* BillSplitter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB3C32D023EF2B630063ECCC /* Build configuration list for PBXNativeTarget "BillSplitter" */;
+			buildPhases = (
+				DB3C32A223EF2B5F0063ECCC /* Sources */,
+				DB3C32A323EF2B5F0063ECCC /* Frameworks */,
+				DB3C32A423EF2B5F0063ECCC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BillSplitter;
+			productName = BillSplitter;
+			productReference = DB3C32A623EF2B5F0063ECCC /* BillSplitter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DB3C32BB23EF2B630063ECCC /* BillSplitterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB3C32D323EF2B630063ECCC /* Build configuration list for PBXNativeTarget "BillSplitterTests" */;
+			buildPhases = (
+				DB3C32B823EF2B630063ECCC /* Sources */,
+				DB3C32B923EF2B630063ECCC /* Frameworks */,
+				DB3C32BA23EF2B630063ECCC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB3C32BE23EF2B630063ECCC /* PBXTargetDependency */,
+			);
+			name = BillSplitterTests;
+			productName = BillSplitterTests;
+			productReference = DB3C32BC23EF2B630063ECCC /* BillSplitterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DB3C32C623EF2B630063ECCC /* BillSplitterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB3C32D623EF2B630063ECCC /* Build configuration list for PBXNativeTarget "BillSplitterUITests" */;
+			buildPhases = (
+				DB3C32C323EF2B630063ECCC /* Sources */,
+				DB3C32C423EF2B630063ECCC /* Frameworks */,
+				DB3C32C523EF2B630063ECCC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB3C32C923EF2B630063ECCC /* PBXTargetDependency */,
+			);
+			name = BillSplitterUITests;
+			productName = BillSplitterUITests;
+			productReference = DB3C32C723EF2B630063ECCC /* BillSplitterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DB3C329E23EF2B5F0063ECCC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "David Ho";
+				TargetAttributes = {
+					DB3C32A523EF2B5F0063ECCC = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					DB3C32BB23EF2B630063ECCC = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = DB3C32A523EF2B5F0063ECCC;
+					};
+					DB3C32C623EF2B630063ECCC = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = DB3C32A523EF2B5F0063ECCC;
+					};
+				};
+			};
+			buildConfigurationList = DB3C32A123EF2B5F0063ECCC /* Build configuration list for PBXProject "BillSplitter" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DB3C329D23EF2B5F0063ECCC;
+			productRefGroup = DB3C32A723EF2B5F0063ECCC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DB3C32A523EF2B5F0063ECCC /* BillSplitter */,
+				DB3C32BB23EF2B630063ECCC /* BillSplitterTests */,
+				DB3C32C623EF2B630063ECCC /* BillSplitterUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DB3C32A423EF2B5F0063ECCC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB3C32B623EF2B630063ECCC /* LaunchScreen.storyboard in Resources */,
+				DB3C32B323EF2B630063ECCC /* Assets.xcassets in Resources */,
+				DB3C32B123EF2B5F0063ECCC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB3C32BA23EF2B630063ECCC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB3C32C523EF2B630063ECCC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DB3C32A223EF2B5F0063ECCC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB3C32AE23EF2B5F0063ECCC /* ViewController.swift in Sources */,
+				DB3C32AA23EF2B5F0063ECCC /* AppDelegate.swift in Sources */,
+				DB3C32AC23EF2B5F0063ECCC /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB3C32B823EF2B630063ECCC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB3C32C123EF2B630063ECCC /* BillSplitterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB3C32C323EF2B630063ECCC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB3C32CC23EF2B630063ECCC /* BillSplitterUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DB3C32BE23EF2B630063ECCC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB3C32A523EF2B5F0063ECCC /* BillSplitter */;
+			targetProxy = DB3C32BD23EF2B630063ECCC /* PBXContainerItemProxy */;
+		};
+		DB3C32C923EF2B630063ECCC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB3C32A523EF2B5F0063ECCC /* BillSplitter */;
+			targetProxy = DB3C32C823EF2B630063ECCC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DB3C32AF23EF2B5F0063ECCC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB3C32B023EF2B5F0063ECCC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DB3C32B423EF2B630063ECCC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB3C32B523EF2B630063ECCC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DB3C32CE23EF2B630063ECCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DB3C32CF23EF2B630063ECCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DB3C32D123EF2B630063ECCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8437TMTXLQ;
+				INFOPLIST_FILE = BillSplitter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "David-Ho.BillSplitter";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DB3C32D223EF2B630063ECCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8437TMTXLQ;
+				INFOPLIST_FILE = BillSplitter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "David-Ho.BillSplitter";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DB3C32D423EF2B630063ECCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8437TMTXLQ;
+				INFOPLIST_FILE = BillSplitterTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "David-Ho.BillSplitterTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BillSplitter.app/BillSplitter";
+			};
+			name = Debug;
+		};
+		DB3C32D523EF2B630063ECCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8437TMTXLQ;
+				INFOPLIST_FILE = BillSplitterTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "David-Ho.BillSplitterTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BillSplitter.app/BillSplitter";
+			};
+			name = Release;
+		};
+		DB3C32D723EF2B630063ECCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8437TMTXLQ;
+				INFOPLIST_FILE = BillSplitterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "David-Ho.BillSplitterUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BillSplitter;
+			};
+			name = Debug;
+		};
+		DB3C32D823EF2B630063ECCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8437TMTXLQ;
+				INFOPLIST_FILE = BillSplitterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "David-Ho.BillSplitterUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BillSplitter;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DB3C32A123EF2B5F0063ECCC /* Build configuration list for PBXProject "BillSplitter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB3C32CE23EF2B630063ECCC /* Debug */,
+				DB3C32CF23EF2B630063ECCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB3C32D023EF2B630063ECCC /* Build configuration list for PBXNativeTarget "BillSplitter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB3C32D123EF2B630063ECCC /* Debug */,
+				DB3C32D223EF2B630063ECCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB3C32D323EF2B630063ECCC /* Build configuration list for PBXNativeTarget "BillSplitterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB3C32D423EF2B630063ECCC /* Debug */,
+				DB3C32D523EF2B630063ECCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB3C32D623EF2B630063ECCC /* Build configuration list for PBXNativeTarget "BillSplitterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB3C32D723EF2B630063ECCC /* Debug */,
+				DB3C32D823EF2B630063ECCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DB3C329E23EF2B5F0063ECCC /* Project object */;
+}
