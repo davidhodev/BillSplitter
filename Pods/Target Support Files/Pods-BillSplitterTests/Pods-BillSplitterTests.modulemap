@@ -1,0 +1,6 @@
+framework module Pods_BillSplitterTests {
+  umbrella header "Pods-BillSplitterTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
