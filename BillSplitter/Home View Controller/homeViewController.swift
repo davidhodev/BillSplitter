@@ -39,7 +39,7 @@ class homeViewController: UIViewController, UICollectionViewDelegate {
     
     @IBAction func newBillButtonPressed(_ sender: Any) {
         let newBillVC = newBillViewController()
-        self.navigationController?.pushViewController(newBillVC, animated: true)
+        self.navigationController?.pushViewController(newBillVC, animated: true) 
     }
     
 }
