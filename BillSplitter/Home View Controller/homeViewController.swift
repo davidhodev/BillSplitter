@@ -11,10 +11,15 @@ import UIKit
 class homeViewController: UIViewController, UICollectionViewDelegate {
 
     @IBOutlet weak var previousBillsCollectionView: UICollectionView!
+    
+    @IBOutlet weak var newBillButton: UIButton!
+    
+    
     var previousBills: [billModel] = billModel.getPreviousBills()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.isNavigationBarHidden = true
         self.view.backgroundColor = UIColor(red:0.95, green:0.92, blue:0.98, alpha:1.0)
         
         previousBillsCollectionView.delegate = self
@@ -29,6 +34,12 @@ class homeViewController: UIViewController, UICollectionViewDelegate {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+    }
+    
+    
+    @IBAction func newBillButtonPressed(_ sender: Any) {
+        let newBillVC = newBillViewController()
+        self.navigationController?.pushViewController(newBillVC, animated: true)
     }
     
 }
