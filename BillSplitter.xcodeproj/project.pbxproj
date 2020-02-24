@@ -23,6 +23,7 @@
 		DB3C32E623EF59BD0063ECCC /* previousBillsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB3C32E523EF59BD0063ECCC /* previousBillsCollectionViewCell.xib */; };
 		DB703A7A23F0B80400F98E1D /* newBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB703A7923F0B80400F98E1D /* newBillViewController.swift */; };
 		DB83FD3723F0CFF100D9A8CB /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = DB83FD3623F0CFF100D9A8CB /* tessdata */; };
+		DB83FD3923F0D84E00D9A8CB /* newBillViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB83FD3823F0D84E00D9A8CB /* newBillViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		DB3C32E523EF59BD0063ECCC /* previousBillsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = previousBillsCollectionViewCell.xib; sourceTree = "<group>"; };
 		DB703A7923F0B80400F98E1D /* newBillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newBillViewController.swift; sourceTree = "<group>"; };
 		DB83FD3623F0CFF100D9A8CB /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
+		DB83FD3823F0D84E00D9A8CB /* newBillViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = newBillViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				DB703A7923F0B80400F98E1D /* newBillViewController.swift */,
+				DB83FD3823F0D84E00D9A8CB /* newBillViewController.xib */,
 				DB3C32A923EF2B5F0063ECCC /* AppDelegate.swift */,
 				DB3C32AB23EF2B5F0063ECCC /* SceneDelegate.swift */,
 				DB3C32E723EF5A660063ECCC /* Home View Controller */,
@@ -301,6 +304,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB83FD3923F0D84E00D9A8CB /* newBillViewController.xib in Resources */,
 				DB3C32B623EF2B630063ECCC /* LaunchScreen.storyboard in Resources */,
 				DB3C32B323EF2B630063ECCC /* Assets.xcassets in Resources */,
 				DB83FD3723F0CFF100D9A8CB /* tessdata in Resources */,
