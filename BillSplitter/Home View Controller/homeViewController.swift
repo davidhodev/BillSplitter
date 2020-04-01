@@ -26,6 +26,7 @@ class homeViewController: UIViewController, UICollectionViewDelegate {
         previousBillsCollectionView.dataSource = self
         previousBillsCollectionView.isUserInteractionEnabled = true
         previousBillsCollectionView.register(UINib(nibName: "previousBillsCollectionViewCell", bundle:nil), forCellWithReuseIdentifier: "previousBillsCollectionViewCell")
+        previousBillsCollectionView.register(UINib(nibName: "emptyPreviousBill", bundle:nil), forCellWithReuseIdentifier: "emptyPreviousBill")
     }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -46,10 +47,17 @@ class homeViewController: UIViewController, UICollectionViewDelegate {
 
 extension homeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        previousBills.count
+        if previousBills.count > 0 {
+            return previousBills.count
+        }
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if (previousBills.count == 0) {
+             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "emptyPreviousBill", for: indexPath) as! emptyPreviousBill
+            return cell
+        }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "previousBillsCollectionViewCell", for: indexPath) as! previousBillsCollectionViewCell
         let bill = previousBills[indexPath.item]
         cell.bill = bill

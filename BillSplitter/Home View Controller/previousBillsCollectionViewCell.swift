@@ -28,3 +28,8 @@ class previousBillsCollectionViewCell: UICollectionViewCell {
            }
        }
 }
+
+class emptyPreviousBill: UICollectionViewCell {
+    @IBOutlet weak var emptyLabel: UILabel!
+    
+}

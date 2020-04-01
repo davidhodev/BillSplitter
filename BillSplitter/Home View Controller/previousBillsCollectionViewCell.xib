@@ -49,7 +49,7 @@
             <connections>
                 <outlet property="restaurantLabel" destination="DNs-ZP-oqa" id="dqk-nv-686"/>
             </connections>
-            <point key="canvasLocation" x="298.55072463768118" y="53.90625"/>
+            <point key="canvasLocation" x="297.82608695652175" y="53.571428571428569"/>
         </collectionViewCell>
     </objects>
     <resources>

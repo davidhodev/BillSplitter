@@ -18,12 +18,6 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whiteBackground" translatesAutoresizingMaskIntoConstraints="NO" id="pfk-TV-fCd">
-                    <rect key="frame" x="0.0" y="106" width="414" height="190"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="190" id="MKG-Vk-NLN"/>
-                    </constraints>
-                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBn-q7-U9P">
                     <rect key="frame" x="45" y="413" width="294" height="164"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -53,6 +47,8 @@
                     <attributedString key="attributedText">
                         <fragment content="New Bill">
                             <attributes>
+                                <color key="NSBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <font key="NSFont" size="22" name="Verdana"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                             </attributes>
@@ -60,27 +56,51 @@
                     </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gli-g3-59f">
+                    <rect key="frame" x="98.5" y="190" width="217" height="79"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="79" id="2QA-Q6-kFX"/>
+                        <constraint firstAttribute="width" constant="217" id="tlP-LD-o5e"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="uploadReceiptImage"/>
+                    <connections>
+                        <action selector="openCameraPressed:" destination="-1" eventType="touchUpInside" id="EI3-72-vxT"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pzj-UN-FnS">
+                    <rect key="frame" x="260" y="733" width="103" height="99"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="99" id="XJw-tc-Odx"/>
+                        <constraint firstAttribute="width" constant="103" id="ltG-K8-11P"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="addItemButton"/>
+                    <connections>
+                        <action selector="addItemButtonPressed:" destination="-1" eventType="touchUpInside" id="ix1-2r-4og"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="2WE-O3-3gT" firstAttribute="leading" secondItem="2gE-JA-iS9" secondAttribute="leading" id="4os-4j-VIP"/>
-                <constraint firstItem="pfk-TV-fCd" firstAttribute="trailing" secondItem="DY2-LN-RJm" secondAttribute="trailing" id="8PO-oY-SX0"/>
+                <constraint firstItem="gli-g3-59f" firstAttribute="top" secondItem="CQp-TX-l8h" secondAttribute="bottom" constant="20" id="NHB-j8-5TV"/>
+                <constraint firstItem="DY2-LN-RJm" firstAttribute="bottom" secondItem="pzj-UN-FnS" secondAttribute="bottom" constant="30" id="QOH-ll-qtl"/>
                 <constraint firstItem="2gE-JA-iS9" firstAttribute="leading" secondItem="DY2-LN-RJm" secondAttribute="leading" constant="35" id="SLW-6r-hCd"/>
-                <constraint firstItem="pfk-TV-fCd" firstAttribute="leading" secondItem="DY2-LN-RJm" secondAttribute="leading" id="Xmg-im-xbI"/>
+                <constraint firstItem="gli-g3-59f" firstAttribute="centerX" secondItem="8Ea-qu-YKd" secondAttribute="centerX" id="WVG-sE-imR"/>
                 <constraint firstItem="2gE-JA-iS9" firstAttribute="top" secondItem="DY2-LN-RJm" secondAttribute="top" constant="30" id="gKL-4g-K3s"/>
                 <constraint firstItem="CQp-TX-l8h" firstAttribute="leading" secondItem="DY2-LN-RJm" secondAttribute="leading" id="gUU-8l-tln"/>
                 <constraint firstItem="CQp-TX-l8h" firstAttribute="trailing" secondItem="DY2-LN-RJm" secondAttribute="trailing" id="jeM-zs-lSO"/>
-                <constraint firstItem="pfk-TV-fCd" firstAttribute="top" secondItem="2gE-JA-iS9" secondAttribute="bottom" constant="20" id="lOu-81-BKm"/>
                 <constraint firstItem="CQp-TX-l8h" firstAttribute="top" secondItem="8Ea-qu-YKd" secondAttribute="top" id="tMF-3F-O8m"/>
                 <constraint firstItem="2WE-O3-3gT" firstAttribute="top" secondItem="2gE-JA-iS9" secondAttribute="bottom" constant="20" id="xTn-nF-lNT"/>
+                <constraint firstItem="DY2-LN-RJm" firstAttribute="trailing" secondItem="pzj-UN-FnS" secondAttribute="trailing" constant="51" id="zDa-KW-Znd"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="DY2-LN-RJm"/>
             <point key="canvasLocation" x="163.768115942029" y="116.51785714285714"/>
         </view>
     </objects>
     <resources>
+        <image name="addItemButton" width="500" height="500"/>
         <image name="backButton" width="36" height="24"/>
         <image name="headerBackground" width="750" height="292"/>
-        <image name="whiteBackground" width="750" height="438"/>
+        <image name="uploadReceiptImage" width="544" height="200"/>
     </resources>
 </document>

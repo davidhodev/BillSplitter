@@ -16,6 +16,6 @@ class billModel {
     }
     
     static func getPreviousBills() -> [billModel] {
-        return [billModel(restaurant: "Broccolino"), billModel(restaurant: "World Famous Deli"), billModel(restaurant: "Born Thai")]
+        return []//[billModel(restaurant: "Broccolino"), billModel(restaurant: "World Famous Deli"), billModel(restaurant: "Born Thai")]
     }
 }

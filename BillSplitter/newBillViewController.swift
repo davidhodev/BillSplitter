@@ -9,7 +9,7 @@
 import UIKit
 import TesseractOCR
 
-class newBillViewController: UIViewController, G8TesseractDelegate {
+class newBillViewController: UIViewController, G8TesseractDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var label: UILabel!
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -42,6 +42,18 @@ class newBillViewController: UIViewController, G8TesseractDelegate {
         print("Recognition Progress \(tesseract.progress) %")
     }
     
+    @IBAction func openCameraPressed(_ sender: Any) {
+        let cameraVC = UIImagePickerController()
+        cameraVC.sourceType = .camera
+        cameraVC.allowsEditing = true
+        cameraVC.delegate = self
+        self.present(cameraVC, animated: true)
+    }
     
+    @IBAction func addItemButtonPressed(_ sender: Any) {
+        let vc = addItemView()
+        vc.modalPresentationStyle = .popover
+        self.present(vc, animated: true, completion: nil)
+    }
 }
 
