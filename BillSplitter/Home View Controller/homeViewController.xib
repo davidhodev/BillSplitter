@@ -38,10 +38,16 @@
                     <state key="normal" image="otherButtonImage">
                         <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="previousBillsButton:" destination="-1" eventType="touchUpInside" id="3oA-HR-k51"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sv3-Ha-YBV">
                     <rect key="frame" x="65" y="667" width="349" height="80"/>
                     <state key="normal" image="otherButtonImage"/>
+                    <connections>
+                        <action selector="settingsButtonPressed:" destination="-1" eventType="touchUpInside" id="K8m-vB-Qs2"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="asF-o0-7gQ">
                     <rect key="frame" x="65" y="467" width="349" height="80"/>
@@ -52,7 +58,7 @@
                     </connections>
                 </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settingsIcon" translatesAutoresizingMaskIntoConstraints="NO" id="nLr-iY-Qit">
-                    <rect key="frame" x="101" y="689" width="26" height="26"/>
+                    <rect key="frame" x="101" y="691" width="26" height="26"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="26" id="b8s-3q-sx9"/>
                         <constraint firstAttribute="width" constant="26" id="iCC-8K-KIr"/>
@@ -72,7 +78,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Lj-9f-ffQ">
-                    <rect key="frame" x="139" y="691.5" width="64" height="21"/>
+                    <rect key="frame" x="139" y="693.5" width="64" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -97,7 +103,7 @@
                 <constraint firstItem="Fxj-LG-zR6" firstAttribute="leading" secondItem="gP6-IT-suC" secondAttribute="leading" constant="101" id="hFL-Ws-kXE"/>
                 <constraint firstItem="Fxj-LG-zR6" firstAttribute="top" secondItem="asF-o0-7gQ" secondAttribute="bottom" constant="50" id="jpM-Qp-Hcx"/>
                 <constraint firstItem="Sv3-Ha-YBV" firstAttribute="top" secondItem="XuX-6B-bdy" secondAttribute="bottom" constant="20" id="lcX-ve-dR6"/>
-                <constraint firstItem="nLr-iY-Qit" firstAttribute="top" secondItem="XuX-6B-bdy" secondAttribute="bottom" constant="42" id="muh-75-mt9"/>
+                <constraint firstItem="nLr-iY-Qit" firstAttribute="top" secondItem="XuX-6B-bdy" secondAttribute="bottom" constant="44" id="muh-75-mt9"/>
                 <constraint firstItem="P4I-2I-qZb" firstAttribute="top" secondItem="NWV-aA-Bva" secondAttribute="top" id="yj8-Gg-Att"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="gP6-IT-suC"/>

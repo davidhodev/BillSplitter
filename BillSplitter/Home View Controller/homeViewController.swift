@@ -14,7 +14,6 @@ class homeViewController: UIViewController, UICollectionViewDelegate {
     
     @IBOutlet weak var newBillButton: UIButton!
     
-    
     var previousBills: [billModel] = billModel.getPreviousBills()
     
     override func viewDidLoad() {
@@ -40,8 +39,19 @@ class homeViewController: UIViewController, UICollectionViewDelegate {
     
     @IBAction func newBillButtonPressed(_ sender: Any) {
         let newBillVC = newBillViewController()
-        self.navigationController?.pushViewController(newBillVC, animated: true) 
+        self.navigationController?.pushViewController(newBillVC, animated: true)
     }
+    
+    @IBAction func previousBillsButton(_ sender: Any) {
+        let previousBillsVC = previousBillsViewController()
+        self.navigationController?.pushViewController(previousBillsVC, animated: true)
+    }
+    
+    @IBAction func settingsButtonPressed(_ sender: Any) {
+        let settingsVC = settingsViewController()
+        self.navigationController?.pushViewController(settingsVC, animated: true)
+    }
+    
     
 }
 

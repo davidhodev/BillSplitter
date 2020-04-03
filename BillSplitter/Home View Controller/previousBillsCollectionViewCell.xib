@@ -19,30 +19,103 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="previousBillCollectionViewCellIamge" translatesAutoresizingMaskIntoConstraints="NO" id="8Yn-td-YIa">
                         <rect key="frame" x="0.0" y="0.0" width="185" height="222"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNq-Ri-b0C">
-                        <rect key="frame" x="16" y="37" width="83" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNs-ZP-oqa">
+                        <rect key="frame" x="16" y="48" width="154" height="21"/>
+                        <attributedString key="attributedText">
+                            <fragment content="Labels">
+                                <attributes>
+                                    <font key="NSFont" size="17" name="Verdana"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNs-ZP-oqa">
-                        <rect key="frame" x="16" y="66" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdj-Fd-zmO">
+                        <rect key="frame" x="16" y="30" width="66" height="15"/>
+                        <attributedString key="attributedText">
+                            <fragment content="Restaurant">
+                                <attributes>
+                                    <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <font key="NSFont" size="12" name="Verdana"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C2C-gC-zwB">
+                        <rect key="frame" x="16" y="89" width="58" height="15"/>
+                        <attributedString key="attributedText">
+                            <fragment content="Total Paid">
+                                <attributes>
+                                    <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <font key="NSFont" size="12" name="Verdana"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1OB-mr-sIb">
+                        <rect key="frame" x="16" y="148" width="77" height="15"/>
+                        <attributedString key="attributedText">
+                            <fragment content="Amount Paid">
+                                <attributes>
+                                    <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <font key="NSFont" size="12" name="Verdana-Italic"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iw4-Aj-oqe">
+                        <rect key="frame" x="16" y="166" width="61" height="21"/>
+                        <attributedString key="attributedText">
+                            <fragment content="$21.24">
+                                <attributes>
+                                    <font key="NSFont" size="17" name="Verdana"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIZ-q0-MaP">
+                        <rect key="frame" x="16" y="107" width="154" height="21"/>
+                        <attributedString key="attributedText">
+                            <fragment content="$124.86">
+                                <attributes>
+                                    <font key="NSFont" size="17" name="Verdana"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="sNq-Ri-b0C" firstAttribute="top" secondItem="iTG-bC-IfN" secondAttribute="top" constant="37" id="6N7-4Y-91v"/>
-                    <constraint firstItem="sNq-Ri-b0C" firstAttribute="leading" secondItem="iTG-bC-IfN" secondAttribute="leading" constant="16" id="BGZ-jy-9EP"/>
+                    <constraint firstAttribute="trailing" secondItem="DNs-ZP-oqa" secondAttribute="trailing" constant="15" id="4aI-6w-YcN"/>
                     <constraint firstItem="8Yn-td-YIa" firstAttribute="leading" secondItem="iTG-bC-IfN" secondAttribute="leading" id="BKn-vS-315"/>
+                    <constraint firstItem="iw4-Aj-oqe" firstAttribute="leading" secondItem="wdj-Fd-zmO" secondAttribute="leading" id="EA7-6q-QBU"/>
                     <constraint firstAttribute="bottom" secondItem="8Yn-td-YIa" secondAttribute="bottom" id="H1u-dW-yVf"/>
+                    <constraint firstItem="JIZ-q0-MaP" firstAttribute="leading" secondItem="wdj-Fd-zmO" secondAttribute="leading" id="Kfr-Le-azL"/>
+                    <constraint firstItem="DNs-ZP-oqa" firstAttribute="leading" secondItem="wdj-Fd-zmO" secondAttribute="leading" id="LQe-az-cSc"/>
+                    <constraint firstAttribute="trailing" secondItem="JIZ-q0-MaP" secondAttribute="trailing" constant="15" id="RvA-8R-QRX"/>
                     <constraint firstItem="DNs-ZP-oqa" firstAttribute="leading" secondItem="iTG-bC-IfN" secondAttribute="leading" constant="16" id="SbT-fW-V17"/>
+                    <constraint firstItem="1OB-mr-sIb" firstAttribute="top" secondItem="JIZ-q0-MaP" secondAttribute="bottom" constant="20" id="UJl-0f-yBa"/>
+                    <constraint firstItem="1OB-mr-sIb" firstAttribute="leading" secondItem="wdj-Fd-zmO" secondAttribute="leading" id="bql-ND-qvN"/>
+                    <constraint firstItem="iw4-Aj-oqe" firstAttribute="top" secondItem="1OB-mr-sIb" secondAttribute="bottom" constant="3" id="dWh-NL-1Cu"/>
+                    <constraint firstItem="JIZ-q0-MaP" firstAttribute="top" secondItem="C2C-gC-zwB" secondAttribute="bottom" constant="3" id="ex0-se-imC"/>
                     <constraint firstItem="8Yn-td-YIa" firstAttribute="top" secondItem="iTG-bC-IfN" secondAttribute="top" id="f9N-3G-kwg"/>
                     <constraint firstItem="8Yn-td-YIa" firstAttribute="centerX" secondItem="iTG-bC-IfN" secondAttribute="centerX" id="fUu-El-MRJ"/>
                     <constraint firstItem="8Yn-td-YIa" firstAttribute="centerY" secondItem="iTG-bC-IfN" secondAttribute="centerY" id="hJC-7W-sxW"/>
-                    <constraint firstItem="DNs-ZP-oqa" firstAttribute="top" secondItem="sNq-Ri-b0C" secondAttribute="bottom" constant="8" id="jdI-Vx-Gas"/>
+                    <constraint firstItem="wdj-Fd-zmO" firstAttribute="top" secondItem="iTG-bC-IfN" secondAttribute="top" constant="30" id="jc8-cg-VfJ"/>
+                    <constraint firstItem="C2C-gC-zwB" firstAttribute="leading" secondItem="wdj-Fd-zmO" secondAttribute="leading" id="jr3-Fh-DPK"/>
                     <constraint firstAttribute="trailing" secondItem="8Yn-td-YIa" secondAttribute="trailing" id="kDJ-ef-Mhv"/>
+                    <constraint firstItem="C2C-gC-zwB" firstAttribute="top" secondItem="DNs-ZP-oqa" secondAttribute="bottom" constant="20" id="qMb-IL-5ah"/>
+                    <constraint firstItem="DNs-ZP-oqa" firstAttribute="leading" secondItem="wdj-Fd-zmO" secondAttribute="leading" id="qdf-lg-C8p"/>
+                    <constraint firstItem="DNs-ZP-oqa" firstAttribute="top" secondItem="wdj-Fd-zmO" secondAttribute="bottom" constant="3" id="t19-7c-OVU"/>
                 </constraints>
             </collectionViewCellContentView>
             <size key="customSize" width="452" height="275"/>

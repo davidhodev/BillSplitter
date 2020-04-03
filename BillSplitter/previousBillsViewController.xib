@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="previousBillsViewController" customModule="BillSplitter" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="Lar-hk-f7B" id="Qng-ez-oBD"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Lar-hk-f7B">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headerBackground" translatesAutoresizingMaskIntoConstraints="NO" id="ZIy-4q-Ngl">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="170"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="170" id="G1F-dN-yA1"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q9J-1s-uhq">
+                    <rect key="frame" x="35" y="74" width="20" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="Uqm-s3-wes"/>
+                        <constraint firstAttribute="width" constant="20" id="mrZ-Ka-eQg"/>
+                    </constraints>
+                    <state key="normal" image="backButton"/>
+                    <connections>
+                        <action selector="backButtonPressed:" destination="-1" eventType="touchUpInside" id="KqI-fP-m3T"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7n-CX-lkf">
+                    <rect key="frame" x="35" y="112" width="146" height="27"/>
+                    <attributedString key="attributedText">
+                        <fragment content="Previous Bills">
+                            <attributes>
+                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="NSFont" size="22" name="Verdana"/>
+                                <font key="NSOriginalFont" size="22" name="Verdana"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="ZIy-4q-Ngl" firstAttribute="trailing" secondItem="ay4-t6-lux" secondAttribute="trailing" id="2Se-gk-kai"/>
+                <constraint firstItem="q9J-1s-uhq" firstAttribute="top" secondItem="ay4-t6-lux" secondAttribute="top" constant="30" id="8vS-Nu-LO8"/>
+                <constraint firstItem="ZIy-4q-Ngl" firstAttribute="leading" secondItem="ay4-t6-lux" secondAttribute="leading" id="HxM-na-mnD"/>
+                <constraint firstItem="r7n-CX-lkf" firstAttribute="top" secondItem="q9J-1s-uhq" secondAttribute="bottom" constant="20" id="K4V-Rn-P5O"/>
+                <constraint firstItem="r7n-CX-lkf" firstAttribute="leading" secondItem="q9J-1s-uhq" secondAttribute="leading" id="tbZ-h1-Yuz"/>
+                <constraint firstItem="ZIy-4q-Ngl" firstAttribute="top" secondItem="Lar-hk-f7B" secondAttribute="top" id="u7u-fT-1oQ"/>
+                <constraint firstItem="q9J-1s-uhq" firstAttribute="leading" secondItem="ay4-t6-lux" secondAttribute="leading" constant="35" id="yEq-Fo-Tlf"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ay4-t6-lux"/>
+            <point key="canvasLocation" x="-591.304347826087" y="346.875"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="backButton" width="36" height="24"/>
+        <image name="headerBackground" width="750" height="292"/>
+    </resources>
+</document>
