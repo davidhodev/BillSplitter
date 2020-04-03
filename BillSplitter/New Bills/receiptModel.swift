@@ -21,4 +21,8 @@ class receiptModel {
     func addItem(name: String, price: Double) {
         itemsList.append(itemModel(name: name, price: price))
     }
+    
+    func deleteItem(index: Int) {
+        itemsList.remove(at: index)
+    }
 }

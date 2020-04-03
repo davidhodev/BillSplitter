@@ -21,10 +21,12 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8Dn-Tv-CGW">
-                    <rect key="frame" x="0.0" y="306" width="414" height="590"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8Dn-Tv-CGW">
+                    <rect key="frame" x="20" y="306" width="374" height="590"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="590" id="PtE-61-9Ey"/>
+                    </constraints>
                 </tableView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headerBackground" translatesAutoresizingMaskIntoConstraints="NO" id="CQp-TX-l8h">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="170"/>
@@ -126,14 +128,17 @@
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
+                <constraint firstItem="DY2-LN-RJm" firstAttribute="trailing" secondItem="8Dn-Tv-CGW" secondAttribute="trailing" constant="20" id="4EH-An-Csn"/>
                 <constraint firstItem="2WE-O3-3gT" firstAttribute="leading" secondItem="2gE-JA-iS9" secondAttribute="leading" id="4os-4j-VIP"/>
                 <constraint firstItem="Hkw-6A-yPZ" firstAttribute="centerX" secondItem="8Ea-qu-YKd" secondAttribute="centerX" id="Aey-0d-9cc"/>
                 <constraint firstItem="pzj-UN-FnS" firstAttribute="top" secondItem="Hkw-6A-yPZ" secondAttribute="bottom" constant="60" id="KMo-XW-u76"/>
                 <constraint firstItem="gli-g3-59f" firstAttribute="top" secondItem="CQp-TX-l8h" secondAttribute="bottom" constant="20" id="NHB-j8-5TV"/>
                 <constraint firstItem="DY2-LN-RJm" firstAttribute="bottom" secondItem="pzj-UN-FnS" secondAttribute="bottom" constant="30" id="QOH-ll-qtl"/>
                 <constraint firstItem="2gE-JA-iS9" firstAttribute="leading" secondItem="DY2-LN-RJm" secondAttribute="leading" constant="35" id="SLW-6r-hCd"/>
+                <constraint firstItem="8Dn-Tv-CGW" firstAttribute="leading" secondItem="DY2-LN-RJm" secondAttribute="leading" constant="20" id="W2g-DZ-m70"/>
                 <constraint firstItem="gli-g3-59f" firstAttribute="centerX" secondItem="8Ea-qu-YKd" secondAttribute="centerX" id="WVG-sE-imR"/>
                 <constraint firstItem="mCm-3u-n0b" firstAttribute="centerX" secondItem="Hkw-6A-yPZ" secondAttribute="centerX" id="YhC-67-WOw"/>
+                <constraint firstAttribute="bottom" secondItem="8Dn-Tv-CGW" secondAttribute="bottom" id="fZk-6g-rH8"/>
                 <constraint firstItem="2gE-JA-iS9" firstAttribute="top" secondItem="DY2-LN-RJm" secondAttribute="top" constant="30" id="gKL-4g-K3s"/>
                 <constraint firstItem="CQp-TX-l8h" firstAttribute="leading" secondItem="DY2-LN-RJm" secondAttribute="leading" id="gUU-8l-tln"/>
                 <constraint firstItem="CQp-TX-l8h" firstAttribute="trailing" secondItem="DY2-LN-RJm" secondAttribute="trailing" id="jeM-zs-lSO"/>

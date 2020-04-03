@@ -54,7 +54,7 @@ class newBillViewController: UIViewController, G8TesseractDelegate, UIImagePicke
         self.delegate = self
         
         itemsTableView.register(UINib(nibName: "itemTableViewCell", bundle: nil), forCellReuseIdentifier: "itemTableViewCell")
-        
+        itemsTableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         
         
     }
@@ -93,15 +93,35 @@ class newBillViewController: UIViewController, G8TesseractDelegate, UIImagePicke
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "itemTableViewCell", for: indexPath) as! itemTableViewCell
         cell.item = receipt?.getItems()[indexPath.row]
-        
-        cell.layer.cornerRadius = 8
-        cell.layer.masksToBounds = true
-        cell.backgroundColor = UIColor.clear
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+        return 90
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.contentView.layer.masksToBounds = true
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.itemsTableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) {
+            self.receipt?.deleteItem(index: indexPath.row)
+            self.itemsTableView.reloadData()
+        }
+        if self.receipt?.getItems().count == 0 {
+            itemsTableView.isHidden = true
+            noItemsImage.isHidden = false
+            noItemsLabel.isHidden = false
+        }
     }
     
     func addItem(name: String, price: Double) {
@@ -111,6 +131,7 @@ class newBillViewController: UIViewController, G8TesseractDelegate, UIImagePicke
         noItemsImage.isHidden = true
         noItemsLabel.isHidden = true
     }
+    
 }
 
 
