@@ -31,6 +31,9 @@
                         <constraint firstAttribute="width" constant="18" id="kf0-bt-NVw"/>
                     </constraints>
                     <state key="normal" image="backButton"/>
+                    <connections>
+                        <action selector="backButton:" destination="-1" eventType="touchUpInside" id="fZn-ov-dD2"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pGF-BE-snn">
                     <rect key="frame" x="30" y="111" width="94" height="27"/>

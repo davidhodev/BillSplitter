@@ -39,4 +39,45 @@ class receiptModel {
     func deleteMember(index: Int) {
         membersList.remove(at: index)
     }
+    
+    func recalculateMembersCost() {
+        for _ in itemsList {
+                    for member in membersList {
+                        if member.items.count > 0 {
+                            for memberItemindex in 0...member.items.count - 1 {
+                                member.items[memberItemindex].numberOfPeopleOwned = 0
+                            }
+                        }
+                    }
+                }
+        
+        
+        for item in itemsList {
+            for member in membersList {
+                if member.items.count > 0 {
+                    for memberItemindex in 0...member.items.count - 1 {
+                        if member.items[memberItemindex] == item {
+                            member.items[memberItemindex].numberOfPeopleOwned += 1
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    func calculateAmountOwed() {
+        for member in membersList {
+            var amount: Double = 0
+
+            for item in member.items {
+                if item.numberOfPeopleOwned != 0 {
+                    amount +=  item.price/Double(integerLiteral: Int64(item.numberOfPeopleOwned))
+                }
+                else {
+                    amount += item.price
+                }
+            }
+            member.amountOwed = amount
+        }
+    }
 }

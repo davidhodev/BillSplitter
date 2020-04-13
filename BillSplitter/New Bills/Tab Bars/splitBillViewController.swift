@@ -35,7 +35,7 @@ class splitBillViewController: UIViewController, UITableViewDelegate, UITableVie
         self.itemsTableView.dataSource = self
         self.itemsTableView.dragDelegate = self
         self.itemsTableView.backgroundColor = UIColor(red:0.95, green:0.92, blue:0.98, alpha:1.0)
-        itemsTableView.register(UINib(nibName: "itemTableViewCell", bundle: nil), forCellReuseIdentifier: "itemTableViewCell")
+        itemsTableView.register(UINib(nibName: "splitItemTableViewCell", bundle: nil), forCellReuseIdentifier: "splitItemTableViewCell")
         itemsTableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         itemsTableView.dragInteractionEnabled = true
         
@@ -45,14 +45,16 @@ class splitBillViewController: UIViewController, UITableViewDelegate, UITableVie
         self.membersTableView.dropDelegate = self
         self.membersTableView.backgroundColor = UIColor(red:0.95, green:0.92, blue:0.98, alpha:1.0)
         self.membersTableView.register(UINib(nibName: "addMemberTableViewCell", bundle: nil), forCellReuseIdentifier: "addMemberTableViewCell")
+        membersTableView.register(UINib(nibName: "splitItemTableViewCell", bundle: nil), forCellReuseIdentifier: "splitItemTableViewCell")
         self.membersTableView.separatorColor = .clear
         membersTableView.dragInteractionEnabled = true
         
+        membersTableView.reloadData()
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        print(receipt?.getMembers())	
+
     }
     
     @IBAction func backButton(_ sender: Any) {
@@ -86,25 +88,50 @@ class splitBillViewController: UIViewController, UITableViewDelegate, UITableVie
         }
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if tableView == membersTableView {
             if (section == 0) {
-                return "Everyone"
+                let view = UIView(frame: CGRect(x:0, y:0, width:tableView.frame.size.width, height:18))
+                let label = UILabel(frame: CGRect(x:10, y:5, width:tableView.frame.size.width, height:18))
+                label.font = UIFont(name: "Verdana", size: 17)
+                label.text = "Everyone"
+                label.textColor = .white
+                view.addSubview(label);
+                view.backgroundColor = UIColor(red:0.41, green:0.08, blue:0.88, alpha:1.00)
+                return view
+                
             }
-            return receipt?.getMembers()[section-1].memberName
+            let view = UIView(frame: CGRect(x:0, y:0, width:tableView.frame.size.width, height:18))
+            let label = UILabel(frame: CGRect(x:10, y:5, width:tableView.frame.size.width, height:18))
+            label.font = UIFont(name: "Verdana", size: 17)
+            label.text = receipt?.getMembers()[section-1].memberName
+            label.textColor = .white
+            view.addSubview(label);
+            view.backgroundColor = UIColor(red:0.41, green:0.08, blue:0.88, alpha:1.00)
+            return view
         }
-        return ""
+        let view = UIView(frame: CGRect(x:0, y:0, width:tableView.frame.size.width, height:18))
+        let label = UILabel(frame: CGRect(x:10, y:5, width:tableView.frame.size.width, height:18))
+        label.font = UIFont(name: "Verdana", size: 17)
+        label.text = "Items"
+        view.addSubview(label);
+        view.backgroundColor = UIColor.clear;
+        return view
+        
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView == membersTableView {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "addMemberTableViewCell", for: indexPath) as! addMemberTableViewCell
-            cell.member = receipt?.getMembers()[indexPath.section - 1]
+            let cell = tableView.dequeueReusableCell(withIdentifier: "splitItemTableViewCell", for: indexPath) as! splitItemTableViewCell
+            cell.isForSplit = true
+            cell.item = receipt?.getMembers()[indexPath.section - 1].items[indexPath.row]
             return cell
         }
         else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "itemTableViewCell", for: indexPath) as! itemTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "splitItemTableViewCell", for: indexPath) as! splitItemTableViewCell
+            cell.isForSplit = false
             cell.item = receipt?.getItems()[indexPath.row]
+            
             return cell
         }
     }
@@ -131,7 +158,7 @@ extension splitBillViewController: UITableViewDragDelegate {
         if tableView == itemsTableView {
             return 90
         }
-        return 45
+        return 90
         
     }
     
@@ -171,12 +198,17 @@ extension splitBillViewController: UITableViewDropDelegate {
                         print(self.membersTableView.numberOfRows(inSection: count))
                         self.receipt?.getMembers()[count-1].addItem(item: item!)
                         self.membersTableView.insertRows(at: [IndexPath(row: self.membersTableView.numberOfRows(inSection: count), section: count)], with: .automatic)
+                        
+                        self.receipt?.recalculateMembersCost()
+                        self.membersTableView.reloadData()
                     }
                 }
                 else {
                     
                     self.receipt?.getMembers()[destination.section-1].addItem(item: item!)
                     self.membersTableView.insertRows(at: [destination], with: .automatic)
+                    self.receipt?.recalculateMembersCost()
+                    self.membersTableView.reloadData()
                     
                 }
             }

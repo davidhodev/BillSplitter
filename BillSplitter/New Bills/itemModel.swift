@@ -10,9 +10,20 @@ import Foundation
 class itemModel {
     var itemName: String
     var price: Double
+    var numberOfPeopleOwned: Int
     
     init(name: String, price: Double ) {
         self.itemName = name
         self.price = price
+        self.numberOfPeopleOwned = 0
+    }
+}
+
+extension itemModel: Equatable {
+    static func == (lhs: itemModel, rhs: itemModel) -> Bool {
+        return
+            lhs.price == rhs.price &&
+            lhs.itemName == rhs.itemName &&
+            lhs.numberOfPeopleOwned == rhs.numberOfPeopleOwned
     }
 }
