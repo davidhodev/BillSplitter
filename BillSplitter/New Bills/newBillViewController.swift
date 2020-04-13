@@ -10,8 +10,8 @@ import UIKit
 import TesseractOCR
 
 class newBillViewController: UIViewController, G8TesseractDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource, addItemDelegate {
-    
-    
+
+
     @IBOutlet weak var noItemsImage: UIImageView!
     @IBOutlet weak var noItemsLabel: UILabel!
     
@@ -19,6 +19,7 @@ class newBillViewController: UIViewController, G8TesseractDelegate, UIImagePicke
     @IBOutlet weak var itemsTableView: UITableView!
     var receipt: receiptModel?
     var delegate: addItemDelegate?
+    var passReceiptDelegate: splitBillTabBarController?
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: "newBillViewController", bundle: nil)
@@ -32,15 +33,15 @@ class newBillViewController: UIViewController, G8TesseractDelegate, UIImagePicke
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(red:0.95, green:0.92, blue:0.98, alpha:1.0)
         
-        if let tesseract = G8Tesseract(language: "eng") {
-            tesseract.delegate = self
-            tesseract.image = UIImage(named: "demoReceipt")
-            tesseract.setVariableValue("0123456789", forKey: "tessedit_char_whitelist")
-//            tesseract.pageSegmentationMode = .auto
-            tesseract.recognize()
-            label.text = tesseract.recognizedText
-            label.isHidden = true
-        }
+//        if let tesseract = G8Tesseract(language: "eng") {
+//            tesseract.delegate = self
+//            tesseract.image = UIImage(named: "demoReceipt")
+//            tesseract.setVariableValue("0123456789", forKey: "tessedit_char_whitelist")
+////            tesseract.pageSegmentationMode = .auto
+//            tesseract.recognize()
+//            label.text = tesseract.recognizedText
+//            label.isHidden = true
+//        }
         self.itemsTableView.delegate = self
         self.itemsTableView.dataSource = self
         self.itemsTableView.backgroundColor = UIColor(red:0.95, green:0.92, blue:0.98, alpha:1.0)
@@ -68,11 +69,22 @@ class newBillViewController: UIViewController, G8TesseractDelegate, UIImagePicke
     }
     
     @IBAction func openCameraPressed(_ sender: Any) {
-        let cameraVC = UIImagePickerController()
-        cameraVC.sourceType = .camera
-        cameraVC.allowsEditing = true
-        cameraVC.delegate = self
-        self.present(cameraVC, animated: true)
+//        let cameraVC = UIImagePickerController()
+//        cameraVC.sourceType = .camera
+//        cameraVC.allowsEditing = true
+//        cameraVC.delegate = self
+//        self.present(cameraVC, animated: true)
+        
+        self.receipt?.addItem(name: "Pizza", price: 13.99)
+        self.receipt?.addItem(name: "Pasta", price: 14.99)
+        self.receipt?.addItem(name: "Bread Sticks", price: 6.99)
+        self.receipt?.addItem(name: "Soda", price: 2.99)
+        self.receipt?.addItem(name: "Tax", price: 4.87)
+        
+        self.itemsTableView.reloadData()
+        self.itemsTableView.isHidden = false
+        noItemsImage.isHidden = true
+        noItemsLabel.isHidden = true
     }
     
     @IBAction func addItemButtonPressed(_ sender: Any) {
@@ -132,7 +144,22 @@ class newBillViewController: UIViewController, G8TesseractDelegate, UIImagePicke
         noItemsLabel.isHidden = true
     }
     
+    @IBAction func doneButtonPressed(_ sender: Any) {
+        
+    
+        if let passedReceipt = self.receipt {
+            let tabBarVC = splitBillTabBarController()
+            tabBarVC.receipt = passedReceipt
+            self.navigationController?.pushViewController(tabBarVC, animated: true)
+        }
+        
+        
+    }
+    
 }
+//protocol passReceiptDelegate: splitBillTabBarController {
+//    func passReceipt(receipt: receiptModel)
+//}
 
 
 

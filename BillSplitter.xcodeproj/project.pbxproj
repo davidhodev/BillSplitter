@@ -21,6 +21,15 @@
 		DB3C32E223EF561C0063ECCC /* previousBillsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3C32E123EF561C0063ECCC /* previousBillsCollectionViewCell.swift */; };
 		DB3C32E423EF57620063ECCC /* billModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3C32E323EF57620063ECCC /* billModel.swift */; };
 		DB3C32E623EF59BD0063ECCC /* previousBillsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB3C32E523EF59BD0063ECCC /* previousBillsCollectionViewCell.xib */; };
+		DB6044E9243D24E70097F6EB /* splitBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6044E8243D24E70097F6EB /* splitBillViewController.swift */; };
+		DB6044EB243D255E0097F6EB /* splitBillViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB6044EA243D255E0097F6EB /* splitBillViewController.xib */; };
+		DB6044ED243D3F860097F6EB /* addMembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6044EC243D3F860097F6EB /* addMembersViewController.swift */; };
+		DB6044EF243D46A20097F6EB /* splitBillTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6044EE243D46A20097F6EB /* splitBillTabBarController.swift */; };
+		DB6044F1243D46C10097F6EB /* splitTabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB6044F0243D46C10097F6EB /* splitTabBarController.xib */; };
+		DB6044F3243D47420097F6EB /* addMembersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB6044F2243D47420097F6EB /* addMembersViewController.xib */; };
+		DB6044F5243D48620097F6EB /* memberModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6044F4243D48620097F6EB /* memberModel.swift */; };
+		DB6044F7243D520A0097F6EB /* addMemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6044F6243D520A0097F6EB /* addMemberTableViewCell.swift */; };
+		DB6044F9243D524B0097F6EB /* addMemberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB6044F8243D524B0097F6EB /* addMemberTableViewCell.xib */; };
 		DB703A7A23F0B80400F98E1D /* newBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB703A7923F0B80400F98E1D /* newBillViewController.swift */; };
 		DB83FD3723F0CFF100D9A8CB /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = DB83FD3623F0CFF100D9A8CB /* tessdata */; };
 		DB83FD3923F0D84E00D9A8CB /* newBillViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB83FD3823F0D84E00D9A8CB /* newBillViewController.xib */; };
@@ -28,6 +37,8 @@
 		DB94C8A5243422480089B725 /* addItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB94C8A4243422480089B725 /* addItemView.swift */; };
 		DB98754E2436AC8E0020539B /* settingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB98754D2436AC8E0020539B /* settingsViewController.xib */; };
 		DB9875502436AC9B0020539B /* settingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB98754F2436AC9B0020539B /* settingsViewController.swift */; };
+		DBAFA478243D5D28009B8EB4 /* addMemberView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBAFA477243D5D28009B8EB4 /* addMemberView.xib */; };
+		DBAFA47A243D5D3A009B8EB4 /* addMemberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAFA479243D5D3A009B8EB4 /* addMemberView.swift */; };
 		DBBFECBA2436B0DE009AB35C /* previousBillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBFECB92436B0DE009AB35C /* previousBillsViewController.swift */; };
 		DBBFECBC2436B108009AB35C /* previousBillsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBBFECBB2436B108009AB35C /* previousBillsViewController.xib */; };
 		DBBFECBE2436BE32009AB35C /* itemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBFECBD2436BE32009AB35C /* itemTableViewCell.swift */; };
@@ -35,6 +46,8 @@
 		DBC1F230243678A000ACC9ED /* receiptModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC1F22F243678A000ACC9ED /* receiptModel.swift */; };
 		DBC1F2322436795700ACC9ED /* itemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC1F2312436795700ACC9ED /* itemModel.swift */; };
 		DBED72F92432A5F6003DA082 /* emptyPreviousBill.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBED72F82432A5F6003DA082 /* emptyPreviousBill.xib */; };
+		DBF2D9CB243E535B0032C6DB /* viewBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF2D9CA243E535B0032C6DB /* viewBillViewController.swift */; };
+		DBF2D9CD243E64FF0032C6DB /* viewBillViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBF2D9CC243E64FF0032C6DB /* viewBillViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +95,15 @@
 		DB3C32E123EF561C0063ECCC /* previousBillsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = previousBillsCollectionViewCell.swift; sourceTree = "<group>"; };
 		DB3C32E323EF57620063ECCC /* billModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = billModel.swift; sourceTree = "<group>"; };
 		DB3C32E523EF59BD0063ECCC /* previousBillsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = previousBillsCollectionViewCell.xib; sourceTree = "<group>"; };
+		DB6044E8243D24E70097F6EB /* splitBillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = splitBillViewController.swift; sourceTree = "<group>"; };
+		DB6044EA243D255E0097F6EB /* splitBillViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = splitBillViewController.xib; sourceTree = "<group>"; };
+		DB6044EC243D3F860097F6EB /* addMembersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addMembersViewController.swift; sourceTree = "<group>"; };
+		DB6044EE243D46A20097F6EB /* splitBillTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = splitBillTabBarController.swift; sourceTree = "<group>"; };
+		DB6044F0243D46C10097F6EB /* splitTabBarController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = splitTabBarController.xib; sourceTree = "<group>"; };
+		DB6044F2243D47420097F6EB /* addMembersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = addMembersViewController.xib; sourceTree = "<group>"; };
+		DB6044F4243D48620097F6EB /* memberModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memberModel.swift; sourceTree = "<group>"; };
+		DB6044F6243D520A0097F6EB /* addMemberTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addMemberTableViewCell.swift; sourceTree = "<group>"; };
+		DB6044F8243D524B0097F6EB /* addMemberTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = addMemberTableViewCell.xib; sourceTree = "<group>"; };
 		DB703A7923F0B80400F98E1D /* newBillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newBillViewController.swift; sourceTree = "<group>"; };
 		DB83FD3623F0CFF100D9A8CB /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 		DB83FD3823F0D84E00D9A8CB /* newBillViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = newBillViewController.xib; sourceTree = "<group>"; };
@@ -89,6 +111,8 @@
 		DB94C8A4243422480089B725 /* addItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addItemView.swift; sourceTree = "<group>"; };
 		DB98754D2436AC8E0020539B /* settingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = settingsViewController.xib; sourceTree = "<group>"; };
 		DB98754F2436AC9B0020539B /* settingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsViewController.swift; sourceTree = "<group>"; };
+		DBAFA477243D5D28009B8EB4 /* addMemberView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = addMemberView.xib; sourceTree = "<group>"; };
+		DBAFA479243D5D3A009B8EB4 /* addMemberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addMemberView.swift; sourceTree = "<group>"; };
 		DBBFECB92436B0DE009AB35C /* previousBillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = previousBillsViewController.swift; sourceTree = "<group>"; };
 		DBBFECBB2436B108009AB35C /* previousBillsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = previousBillsViewController.xib; sourceTree = "<group>"; };
 		DBBFECBD2436BE32009AB35C /* itemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemTableViewCell.swift; sourceTree = "<group>"; };
@@ -96,6 +120,8 @@
 		DBC1F22F243678A000ACC9ED /* receiptModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = receiptModel.swift; sourceTree = "<group>"; };
 		DBC1F2312436795700ACC9ED /* itemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemModel.swift; sourceTree = "<group>"; };
 		DBED72F82432A5F6003DA082 /* emptyPreviousBill.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = emptyPreviousBill.xib; sourceTree = "<group>"; };
+		DBF2D9CA243E535B0032C6DB /* viewBillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewBillViewController.swift; sourceTree = "<group>"; };
+		DBF2D9CC243E64FF0032C6DB /* viewBillViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = viewBillViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,11 +256,32 @@
 				DBBFECBF2436BE40009AB35C /* itemTableViewCell.xib */,
 				DB83FD3823F0D84E00D9A8CB /* newBillViewController.xib */,
 				DBC1F22F243678A000ACC9ED /* receiptModel.swift */,
+				DB6044F4243D48620097F6EB /* memberModel.swift */,
 				DBC1F2312436795700ACC9ED /* itemModel.swift */,
 				DB94C8A4243422480089B725 /* addItemView.swift */,
 				DB94C8A2243421BC0089B725 /* addItemView.xib */,
+				DBAFA476243D5CEC009B8EB4 /* Tab Bars */,
 			);
 			path = "New Bills";
+			sourceTree = "<group>";
+		};
+		DBAFA476243D5CEC009B8EB4 /* Tab Bars */ = {
+			isa = PBXGroup;
+			children = (
+				DB6044EE243D46A20097F6EB /* splitBillTabBarController.swift */,
+				DBF2D9CA243E535B0032C6DB /* viewBillViewController.swift */,
+				DBF2D9CC243E64FF0032C6DB /* viewBillViewController.xib */,
+				DB6044F0243D46C10097F6EB /* splitTabBarController.xib */,
+				DB6044F6243D520A0097F6EB /* addMemberTableViewCell.swift */,
+				DB6044F8243D524B0097F6EB /* addMemberTableViewCell.xib */,
+				DB6044E8243D24E70097F6EB /* splitBillViewController.swift */,
+				DB6044EA243D255E0097F6EB /* splitBillViewController.xib */,
+				DB6044EC243D3F860097F6EB /* addMembersViewController.swift */,
+				DB6044F2243D47420097F6EB /* addMembersViewController.xib */,
+				DBAFA479243D5D3A009B8EB4 /* addMemberView.swift */,
+				DBAFA477243D5D28009B8EB4 /* addMemberView.xib */,
+			);
+			path = "Tab Bars";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,8 +392,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB6044F1243D46C10097F6EB /* splitTabBarController.xib in Resources */,
+				DB6044F9243D524B0097F6EB /* addMemberTableViewCell.xib in Resources */,
 				DB83FD3923F0D84E00D9A8CB /* newBillViewController.xib in Resources */,
 				DB3C32B623EF2B630063ECCC /* LaunchScreen.storyboard in Resources */,
+				DB6044EB243D255E0097F6EB /* splitBillViewController.xib in Resources */,
+				DB6044F3243D47420097F6EB /* addMembersViewController.xib in Resources */,
 				DBED72F92432A5F6003DA082 /* emptyPreviousBill.xib in Resources */,
 				DB94C8A3243421BC0089B725 /* addItemView.xib in Resources */,
 				DBBFECBC2436B108009AB35C /* previousBillsViewController.xib in Resources */,
@@ -354,7 +405,9 @@
 				DB98754E2436AC8E0020539B /* settingsViewController.xib in Resources */,
 				DB83FD3723F0CFF100D9A8CB /* tessdata in Resources */,
 				DB3C32E623EF59BD0063ECCC /* previousBillsCollectionViewCell.xib in Resources */,
+				DBF2D9CD243E64FF0032C6DB /* viewBillViewController.xib in Resources */,
 				DBBFECC12436C9F6009AB35C /* itemTableViewCell.xib in Resources */,
+				DBAFA478243D5D28009B8EB4 /* addMemberView.xib in Resources */,
 				DB3C32DE23EF4A6B0063ECCC /* homeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -468,16 +521,23 @@
 			files = (
 				DBBFECBE2436BE32009AB35C /* itemTableViewCell.swift in Sources */,
 				DB3C32E423EF57620063ECCC /* billModel.swift in Sources */,
+				DBAFA47A243D5D3A009B8EB4 /* addMemberView.swift in Sources */,
+				DB6044ED243D3F860097F6EB /* addMembersViewController.swift in Sources */,
 				DB3C32AA23EF2B5F0063ECCC /* AppDelegate.swift in Sources */,
 				DBC1F230243678A000ACC9ED /* receiptModel.swift in Sources */,
+				DB6044F5243D48620097F6EB /* memberModel.swift in Sources */,
 				DB703A7A23F0B80400F98E1D /* newBillViewController.swift in Sources */,
 				DB3C32AC23EF2B5F0063ECCC /* SceneDelegate.swift in Sources */,
 				DB9875502436AC9B0020539B /* settingsViewController.swift in Sources */,
+				DB6044E9243D24E70097F6EB /* splitBillViewController.swift in Sources */,
 				DBBFECBA2436B0DE009AB35C /* previousBillsViewController.swift in Sources */,
 				DB94C8A5243422480089B725 /* addItemView.swift in Sources */,
+				DB6044F7243D520A0097F6EB /* addMemberTableViewCell.swift in Sources */,
 				DBC1F2322436795700ACC9ED /* itemModel.swift in Sources */,
+				DB6044EF243D46A20097F6EB /* splitBillTabBarController.swift in Sources */,
 				DB3C32E223EF561C0063ECCC /* previousBillsCollectionViewCell.swift in Sources */,
 				DB3C32E023EF4F710063ECCC /* homeViewController.swift in Sources */,
+				DBF2D9CB243E535B0032C6DB /* viewBillViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

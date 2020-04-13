@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="addMemberView" customModule="BillSplitter" customModuleProvider="target">
+            <connections>
+                <outlet property="nameTextField" destination="YjC-dq-ZRd" id="H14-jA-91x"/>
+                <outlet property="view" destination="xwa-KV-y9I" id="U68-Oj-Inl"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="xwa-KV-y9I">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="addItemBackground" translatesAutoresizingMaskIntoConstraints="NO" id="cXU-vh-Z8s">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="490"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="490" id="wAL-cH-K4A"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5pZ-UM-GQc">
+                    <rect key="frame" x="30" y="79" width="18" height="12"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="18" id="MKa-ff-YCf"/>
+                        <constraint firstAttribute="height" constant="12" id="hXJ-Pb-ONb"/>
+                    </constraints>
+                    <state key="normal" image="backButton"/>
+                    <connections>
+                        <action selector="backButtonPressed:" destination="-1" eventType="touchUpInside" id="t59-CD-3Um"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bP8-1Z-vdL">
+                    <rect key="frame" x="72" y="420" width="270" height="70"/>
+                    <state key="normal" backgroundImage="whiteSubmitButton">
+                        <attributedString key="attributedTitle">
+                            <fragment content="Confirm">
+                                <attributes>
+                                    <color key="NSColor" red="0.68627000000000005" green="0.32157000000000002" blue="0.87058999999999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <font key="NSFont" size="18" name="Verdana"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                        <tabStops>
+                                            <textTab alignment="left" location="28">
+                                                <options/>
+                                            </textTab>
+                                            <textTab alignment="left" location="56">
+                                                <options/>
+                                            </textTab>
+                                            <textTab alignment="left" location="84">
+                                                <options/>
+                                            </textTab>
+                                            <textTab alignment="left" location="112">
+                                                <options/>
+                                            </textTab>
+                                            <textTab alignment="left" location="140">
+                                                <options/>
+                                            </textTab>
+                                            <textTab alignment="left" location="168">
+                                                <options/>
+                                            </textTab>
+                                            <textTab alignment="left" location="196">
+                                                <options/>
+                                            </textTab>
+                                            <textTab alignment="left" location="224">
+                                                <options/>
+                                            </textTab>
+                                            <textTab alignment="left" location="252">
+                                                <options/>
+                                            </textTab>
+                                            <textTab alignment="left" location="280">
+                                                <options/>
+                                            </textTab>
+                                            <textTab alignment="left" location="308">
+                                                <options/>
+                                            </textTab>
+                                            <textTab alignment="left" location="336">
+                                                <options/>
+                                            </textTab>
+                                        </tabStops>
+                                    </paragraphStyle>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                    </state>
+                    <connections>
+                        <action selector="confirmButtonPressed:" destination="-1" eventType="touchUpInside" id="Twn-uO-dAt"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" minimumFontSize="17" background="textFieldPurple" disabledBackground="textFieldPurple" translatesAutoresizingMaskIntoConstraints="NO" id="YjC-dq-ZRd">
+                    <rect key="frame" x="72" y="340" width="270" height="70"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="7CO-Zn-NSx"/>
+                        <constraint firstAttribute="width" constant="270" id="gAp-ht-3KH"/>
+                    </constraints>
+                    <attributedString key="attributedText">
+                        <fragment content="Member Name">
+                            <attributes>
+                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="NSFont" size="18" name="Verdana"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="apd-VR-vRC" firstAttribute="bottom" secondItem="bP8-1Z-vdL" secondAttribute="bottom" constant="372" id="4Ug-Py-rF1"/>
+                <constraint firstItem="cXU-vh-Z8s" firstAttribute="leading" secondItem="apd-VR-vRC" secondAttribute="leading" id="FFb-uy-cAn"/>
+                <constraint firstItem="bP8-1Z-vdL" firstAttribute="width" secondItem="YjC-dq-ZRd" secondAttribute="width" id="Fhv-l3-KYd"/>
+                <constraint firstItem="bP8-1Z-vdL" firstAttribute="centerX" secondItem="YjC-dq-ZRd" secondAttribute="centerX" id="JiH-aR-dXi"/>
+                <constraint firstItem="cXU-vh-Z8s" firstAttribute="centerX" secondItem="xwa-KV-y9I" secondAttribute="centerX" id="Kwt-Tw-WwY"/>
+                <constraint firstItem="apd-VR-vRC" firstAttribute="trailing" secondItem="cXU-vh-Z8s" secondAttribute="trailing" id="L2W-It-qDn"/>
+                <constraint firstItem="5pZ-UM-GQc" firstAttribute="top" secondItem="apd-VR-vRC" secondAttribute="top" constant="35" id="NJX-nZ-4yj"/>
+                <constraint firstItem="bP8-1Z-vdL" firstAttribute="height" secondItem="YjC-dq-ZRd" secondAttribute="height" id="Rnb-Li-ob7"/>
+                <constraint firstItem="YjC-dq-ZRd" firstAttribute="centerX" secondItem="xwa-KV-y9I" secondAttribute="centerX" id="a8u-6E-FD6"/>
+                <constraint firstItem="5pZ-UM-GQc" firstAttribute="leading" secondItem="apd-VR-vRC" secondAttribute="leading" constant="30" id="jCX-vz-Cdi"/>
+                <constraint firstItem="bP8-1Z-vdL" firstAttribute="top" secondItem="YjC-dq-ZRd" secondAttribute="bottom" constant="10" id="pNx-5b-5Bb"/>
+                <constraint firstItem="cXU-vh-Z8s" firstAttribute="top" secondItem="xwa-KV-y9I" secondAttribute="top" id="rGP-HB-CBg"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="apd-VR-vRC"/>
+            <point key="canvasLocation" x="30.434782608695656" y="10.714285714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="addItemBackground" width="375" height="476"/>
+        <image name="backButton" width="36" height="24"/>
+        <image name="textFieldPurple" width="500" height="128"/>
+        <image name="whiteSubmitButton" width="200" height="57"/>
+    </resources>
+</document>

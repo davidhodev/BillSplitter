@@ -9,9 +9,11 @@
 import Foundation
 class receiptModel {
     var itemsList: [itemModel]
+    var membersList: [memberModel]
     
     init() {
         self.itemsList = []
+        self.membersList = [memberModel(name: "Me", price: 0)]
     }
     
     func getItems() -> [itemModel] {
@@ -24,5 +26,17 @@ class receiptModel {
     
     func deleteItem(index: Int) {
         itemsList.remove(at: index)
+    }
+    
+    func getMembers() -> [memberModel] {
+        return membersList
+    }
+    
+    func addMember(name: String) {
+        membersList.append(memberModel(name: name, price: 0))
+    }
+    
+    func deleteMember(index: Int) {
+        membersList.remove(at: index)
     }
 }
