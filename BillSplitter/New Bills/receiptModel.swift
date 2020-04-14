@@ -7,13 +7,29 @@
 //
 
 import Foundation
-class receiptModel {
+class receiptModel: Codable {
     var itemsList: [itemModel]
     var membersList: [memberModel]
     
     init() {
         self.itemsList = []
         self.membersList = [memberModel(name: "Me", price: 0)]
+    }
+    
+    init(coder aDecoder: NSCoder!) {
+        self.itemsList = aDecoder.decodeObject(forKey: "itemsList") as! [itemModel]
+        self.membersList = aDecoder.decodeObject(forKey: "membersList") as! [memberModel]
+    }
+    
+    func initWithCoder(aDecoder: NSCoder) -> receiptModel {
+        self.itemsList = aDecoder.decodeObject(forKey: "itemsList") as! [itemModel]
+        self.membersList = aDecoder.decodeObject(forKey: "membersList") as! [memberModel]
+        return self
+    }
+    
+    func encodeWithCoder(aCoder: NSCoder!) {
+        aCoder.encode(self.itemsList, forKey: "itemsList")
+        aCoder.encode(self.membersList, forKey: "membersList")
     }
     
     func getItems() -> [itemModel] {

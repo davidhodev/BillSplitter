@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class itemModel {
+class itemModel: Codable {
     var itemName: String
     var price: Double
     var numberOfPeopleOwned: Int

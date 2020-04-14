@@ -15,6 +15,8 @@ class homeViewController: UIViewController, UICollectionViewDelegate {
     @IBOutlet weak var newBillButton: UIButton!
     
     var previousBills: [billModel] = billModel.getPreviousBills()
+    var previousReceipts: [receiptModel] = []
+    var previousReceiptsData = UserDefaults.standard.data(forKey: "receipts")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +28,29 @@ class homeViewController: UIViewController, UICollectionViewDelegate {
         previousBillsCollectionView.isUserInteractionEnabled = true
         previousBillsCollectionView.register(UINib(nibName: "previousBillsCollectionViewCell", bundle:nil), forCellWithReuseIdentifier: "previousBillsCollectionViewCell")
         previousBillsCollectionView.register(UINib(nibName: "emptyPreviousBill", bundle:nil), forCellWithReuseIdentifier: "emptyPreviousBill")
+        
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        previousReceipts.removeAll()
+        var receiptCount = UserDefaults.standard.integer(forKey: "receiptCount")
+        print(receiptCount)
+        for index in 1...(receiptCount){
+            print(index)
+            if let unwrappedData = UserDefaults.standard.data(forKey: "receipts\(index)") {
+                do {
+                    
+                    let items = try JSONDecoder().decode(receiptModel.self, from: unwrappedData)
+
+                    previousReceipts.insert(items, at: 0)
+                    
+                } catch let jsonErr {
+                    print("error", jsonErr)
+                }
+            }
+        }
+        self.previousBillsCollectionView.reloadData()
     }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -57,20 +82,20 @@ class homeViewController: UIViewController, UICollectionViewDelegate {
 
 extension homeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if previousBills.count > 0 {
-            return previousBills.count
+        if previousReceipts.count > 0 {
+            return previousReceipts.count
         }
         return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if (previousBills.count == 0) {
+        if (previousReceipts.count == 0) {
              let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "emptyPreviousBill", for: indexPath) as! emptyPreviousBill
             return cell
         }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "previousBillsCollectionViewCell", for: indexPath) as! previousBillsCollectionViewCell
-        let bill = previousBills[indexPath.item]
-        cell.bill = bill
+        let receipt = previousReceipts[indexPath.item]
+        cell.receipt = receipt
         return cell
     }
     

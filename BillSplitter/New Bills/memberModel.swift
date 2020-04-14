@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class memberModel {
+class memberModel: Codable {
     var memberName: String
     var amountOwed: Double
     var items: [itemModel]

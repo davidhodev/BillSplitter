@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="viewBillViewController" customModule="BillSplitter" customModuleProvider="target">
             <connections>
+                <outlet property="saveButton" destination="AG4-Yn-es6" id="3Hz-8Y-ULo"/>
                 <outlet property="view" destination="s70-oz-qRI" id="Eug-nv-l2c"/>
                 <outlet property="viewTableView" destination="p15-Xb-XB9" id="xdL-BH-bQX"/>
             </connections>
@@ -53,6 +54,16 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AG4-Yn-es6">
+                    <rect key="frame" x="110" y="793" width="194" height="54"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="54" id="YdG-0y-I60"/>
+                    </constraints>
+                    <state key="normal" title="Save" backgroundImage="textFieldPurple"/>
+                    <connections>
+                        <action selector="saveButtonPressed:" destination="-1" eventType="touchUpInside" id="iOg-Hg-zhb"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
@@ -61,8 +72,12 @@
                 <constraint firstItem="4i1-b4-6u0" firstAttribute="trailing" secondItem="mjP-8t-KyR" secondAttribute="trailing" id="IAL-8z-4BD"/>
                 <constraint firstItem="pGF-BE-snn" firstAttribute="top" secondItem="tJs-pY-rOM" secondAttribute="bottom" constant="20" id="ObQ-rt-anY"/>
                 <constraint firstItem="4i1-b4-6u0" firstAttribute="top" secondItem="s70-oz-qRI" secondAttribute="top" id="QLe-DA-Zkp"/>
+                <constraint firstItem="AG4-Yn-es6" firstAttribute="centerX" secondItem="s70-oz-qRI" secondAttribute="centerX" id="WHj-14-dUn"/>
                 <constraint firstItem="tJs-pY-rOM" firstAttribute="leading" secondItem="mjP-8t-KyR" secondAttribute="leading" constant="30" id="b0m-l8-DEK"/>
+                <constraint firstItem="mjP-8t-KyR" firstAttribute="trailing" secondItem="AG4-Yn-es6" secondAttribute="trailing" constant="110" id="idr-rq-jbN"/>
+                <constraint firstItem="AG4-Yn-es6" firstAttribute="bottom" secondItem="mjP-8t-KyR" secondAttribute="bottom" constant="-15" id="kkF-S9-tDO"/>
                 <constraint firstItem="tJs-pY-rOM" firstAttribute="top" secondItem="mjP-8t-KyR" secondAttribute="top" constant="35" id="ny9-HY-HZZ"/>
+                <constraint firstItem="AG4-Yn-es6" firstAttribute="leading" secondItem="mjP-8t-KyR" secondAttribute="leading" constant="110" id="wen-Bs-YCw"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="mjP-8t-KyR"/>
             <point key="canvasLocation" x="128.98550724637681" y="93.75"/>
@@ -71,5 +86,6 @@
     <resources>
         <image name="backButton" width="36" height="24"/>
         <image name="headerBackground" width="750" height="292"/>
+        <image name="textFieldPurple" width="500" height="128"/>
     </resources>
 </document>

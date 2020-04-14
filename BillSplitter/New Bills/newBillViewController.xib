@@ -10,7 +10,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="newBillViewController" customModule="BillSplitter" customModuleProvider="target">
             <connections>
                 <outlet property="itemsTableView" destination="8Dn-Tv-CGW" id="cPD-rR-yBb"/>
-                <outlet property="label" destination="xBn-q7-U9P" id="hCd-nQ-cQN"/>
                 <outlet property="noItemsImage" destination="Hkw-6A-yPZ" id="Fie-5X-PKn"/>
                 <outlet property="noItemsLabel" destination="mCm-3u-n0b" id="3Vv-mJ-bXQ"/>
                 <outlet property="view" destination="8Ea-qu-YKd" id="lcV-70-oZp"/>
@@ -118,17 +117,13 @@
                     </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBn-q7-U9P">
-                    <rect key="frame" x="287" y="220" width="294" height="69"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMl-oI-iu9">
-                    <rect key="frame" x="331" y="123" width="46" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Button"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMl-oI-iu9">
+                    <rect key="frame" x="338" y="107.5" width="36" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="36" id="XkB-iR-L5t"/>
+                        <constraint firstAttribute="height" constant="24" id="lHH-5e-0fw"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="fowardButton"/>
                     <connections>
                         <action selector="doneButtonPressed:" destination="-1" eventType="touchUpInside" id="zSS-ME-FoG"/>
                     </connections>
@@ -136,6 +131,7 @@
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
+                <constraint firstItem="gMl-oI-iu9" firstAttribute="centerY" secondItem="2WE-O3-3gT" secondAttribute="centerY" id="1el-rv-Nde"/>
                 <constraint firstItem="DY2-LN-RJm" firstAttribute="trailing" secondItem="8Dn-Tv-CGW" secondAttribute="trailing" constant="20" id="4EH-An-Csn"/>
                 <constraint firstItem="2WE-O3-3gT" firstAttribute="leading" secondItem="2gE-JA-iS9" secondAttribute="leading" id="4os-4j-VIP"/>
                 <constraint firstItem="Hkw-6A-yPZ" firstAttribute="centerX" secondItem="8Ea-qu-YKd" secondAttribute="centerX" id="Aey-0d-9cc"/>
@@ -146,6 +142,7 @@
                 <constraint firstItem="8Dn-Tv-CGW" firstAttribute="leading" secondItem="DY2-LN-RJm" secondAttribute="leading" constant="20" id="W2g-DZ-m70"/>
                 <constraint firstItem="gli-g3-59f" firstAttribute="centerX" secondItem="8Ea-qu-YKd" secondAttribute="centerX" id="WVG-sE-imR"/>
                 <constraint firstItem="mCm-3u-n0b" firstAttribute="centerX" secondItem="Hkw-6A-yPZ" secondAttribute="centerX" id="YhC-67-WOw"/>
+                <constraint firstItem="DY2-LN-RJm" firstAttribute="trailing" secondItem="gMl-oI-iu9" secondAttribute="trailing" constant="40" id="eoL-W9-YfG"/>
                 <constraint firstAttribute="bottom" secondItem="8Dn-Tv-CGW" secondAttribute="bottom" id="fZk-6g-rH8"/>
                 <constraint firstItem="2gE-JA-iS9" firstAttribute="top" secondItem="DY2-LN-RJm" secondAttribute="top" constant="30" id="gKL-4g-K3s"/>
                 <constraint firstItem="CQp-TX-l8h" firstAttribute="leading" secondItem="DY2-LN-RJm" secondAttribute="leading" id="gUU-8l-tln"/>
@@ -159,12 +156,13 @@
                 <constraint firstItem="DY2-LN-RJm" firstAttribute="trailing" secondItem="pzj-UN-FnS" secondAttribute="trailing" constant="51" id="zDa-KW-Znd"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="DY2-LN-RJm"/>
-            <point key="canvasLocation" x="163.768115942029" y="116.51785714285714"/>
+            <point key="canvasLocation" x="79.710144927536234" y="100.44642857142857"/>
         </view>
     </objects>
     <resources>
         <image name="addItemButton" width="500" height="500"/>
         <image name="backButton" width="36" height="24"/>
+        <image name="fowardButton" width="500" height="353"/>
         <image name="headerBackground" width="750" height="292"/>
         <image name="noItemsFoundImage" width="500" height="500"/>
         <image name="uploadReceiptImage" width="544" height="200"/>

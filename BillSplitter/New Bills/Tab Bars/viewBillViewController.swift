@@ -12,8 +12,10 @@ import UIKit
 class viewBillViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var receipt: receiptModel?
+    let userDefaults = UserDefaults.standard
     
     @IBOutlet weak var viewTableView: UITableView!
+    @IBOutlet weak var saveButton: UIButton!
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
             super.init(nibName: "viewBillViewController", bundle: nil)
@@ -81,7 +83,7 @@ class viewBillViewController: UIViewController, UITableViewDelegate, UITableView
         label.textColor = .white
         
         let labelPrice = UILabel(frame: CGRect(x:10, y:40, width:tableView.frame.size.width, height:18))
-        labelPrice.font = UIFont(name: "Verdana", size: 17)
+        labelPrice.font = UIFont(name: "Verdana-Bold", size: 20)
         if let amt = receipt?.getMembers()[section].amountOwed {
             labelPrice.text = String(format: "$%.2f", amt)
         }
@@ -91,8 +93,28 @@ class viewBillViewController: UIViewController, UITableViewDelegate, UITableView
         
         view.addSubview(label);
         view.addSubview(labelPrice);
-        view.backgroundColor = UIColor(red:0.41, green:0.08, blue:0.88, alpha:1.00)
+        view.backgroundColor = UIColor(red:0.41, green:0.10, blue:0.88, alpha:1.00)
         return view
     }
-
+    @IBAction func saveButtonPressed(_ sender: Any) {
+        let encoder = JSONEncoder()
+             if let data = try? encoder.encode(receipt) {
+            let string = String(data: data, encoding: .utf8)!
+            
+            if  (userDefaults.integer(forKey: "receiptCount")) > 0{
+                var newReceiptCount = userDefaults.integer(forKey: "receiptCount")
+                newReceiptCount += 1
+                userDefaults.set(newReceiptCount, forKey: "receiptCount")
+                userDefaults.set(data, forKey: "receipts\(newReceiptCount)")
+            }
+            else {
+                userDefaults.set(1, forKey: "receiptCount")
+                userDefaults.set(data, forKey: "receipts1")
+            }
+            userDefaults.synchronize()
+            
+        }
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
 }

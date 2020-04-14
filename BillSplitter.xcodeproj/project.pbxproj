@@ -50,6 +50,7 @@
 		DBC1F230243678A000ACC9ED /* receiptModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC1F22F243678A000ACC9ED /* receiptModel.swift */; };
 		DBC1F2322436795700ACC9ED /* itemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC1F2312436795700ACC9ED /* itemModel.swift */; };
 		DBED72F92432A5F6003DA082 /* emptyPreviousBill.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBED72F82432A5F6003DA082 /* emptyPreviousBill.xib */; };
+		DBF1E8A3244639FD0043C168 /* getReceiptModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF1E8A2244639FD0043C168 /* getReceiptModel.swift */; };
 		DBF2D9CB243E535B0032C6DB /* viewBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF2D9CA243E535B0032C6DB /* viewBillViewController.swift */; };
 		DBF2D9CD243E64FF0032C6DB /* viewBillViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBF2D9CC243E64FF0032C6DB /* viewBillViewController.xib */; };
 /* End PBXBuildFile section */
@@ -128,6 +129,7 @@
 		DBC1F22F243678A000ACC9ED /* receiptModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = receiptModel.swift; sourceTree = "<group>"; };
 		DBC1F2312436795700ACC9ED /* itemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemModel.swift; sourceTree = "<group>"; };
 		DBED72F82432A5F6003DA082 /* emptyPreviousBill.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = emptyPreviousBill.xib; sourceTree = "<group>"; };
+		DBF1E8A2244639FD0043C168 /* getReceiptModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getReceiptModel.swift; sourceTree = "<group>"; };
 		DBF2D9CA243E535B0032C6DB /* viewBillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewBillViewController.swift; sourceTree = "<group>"; };
 		DBF2D9CC243E64FF0032C6DB /* viewBillViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = viewBillViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -211,6 +213,7 @@
 				DB9875512436ACA10020539B /* New Bills */,
 				DB98754D2436AC8E0020539B /* settingsViewController.xib */,
 				DBBFECB92436B0DE009AB35C /* previousBillsViewController.swift */,
+				DBF1E8A2244639FD0043C168 /* getReceiptModel.swift */,
 				DBBFECBB2436B108009AB35C /* previousBillsViewController.xib */,
 				DB98754F2436AC9B0020539B /* settingsViewController.swift */,
 				DB3C32A923EF2B5F0063ECCC /* AppDelegate.swift */,
@@ -546,6 +549,7 @@
 				DB3C32AC23EF2B5F0063ECCC /* SceneDelegate.swift in Sources */,
 				DB9875502436AC9B0020539B /* settingsViewController.swift in Sources */,
 				DB6044E9243D24E70097F6EB /* splitBillViewController.swift in Sources */,
+				DBF1E8A3244639FD0043C168 /* getReceiptModel.swift in Sources */,
 				DBBFECBA2436B0DE009AB35C /* previousBillsViewController.swift in Sources */,
 				DB94C8A5243422480089B725 /* addItemView.swift in Sources */,
 				DB6044F7243D520A0097F6EB /* addMemberTableViewCell.swift in Sources */,

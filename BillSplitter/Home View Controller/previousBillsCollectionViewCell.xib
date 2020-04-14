@@ -120,7 +120,9 @@
             </collectionViewCellContentView>
             <size key="customSize" width="452" height="275"/>
             <connections>
+                <outlet property="amountPaidLabel" destination="iw4-Aj-oqe" id="wFF-S7-E8g"/>
                 <outlet property="restaurantLabel" destination="DNs-ZP-oqa" id="dqk-nv-686"/>
+                <outlet property="totalPaidLabel" destination="JIZ-q0-MaP" id="Yy9-YI-6Te"/>
             </connections>
             <point key="canvasLocation" x="297.82608695652175" y="53.571428571428569"/>
         </collectionViewCell>
