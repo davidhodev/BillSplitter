@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="previousBillsViewController" customModule="BillSplitter" customModuleProvider="target">
             <connections>
+                <outlet property="previousBillsCollectionView" destination="ySw-8r-RCS" id="0Q8-MY-z8U"/>
                 <outlet property="view" destination="Lar-hk-f7B" id="Qng-ez-oBD"/>
             </connections>
         </placeholder>
@@ -48,12 +49,11 @@
                     </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ySw-8r-RCS">
-                    <rect key="frame" x="0.0" y="178" width="414" height="718"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ySw-8r-RCS">
+                    <rect key="frame" x="20" y="178" width="394" height="208"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Tbd-2V-OVQ">
-                        <size key="itemSize" width="50" height="50"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Tbd-2V-OVQ">
+                        <size key="itemSize" width="180" height="220"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -64,11 +64,15 @@
             <constraints>
                 <constraint firstItem="ZIy-4q-Ngl" firstAttribute="trailing" secondItem="ay4-t6-lux" secondAttribute="trailing" id="2Se-gk-kai"/>
                 <constraint firstItem="q9J-1s-uhq" firstAttribute="top" secondItem="ay4-t6-lux" secondAttribute="top" constant="30" id="8vS-Nu-LO8"/>
+                <constraint firstItem="ySw-8r-RCS" firstAttribute="top" secondItem="ZIy-4q-Ngl" secondAttribute="bottom" constant="8" id="9la-j2-fTl"/>
                 <constraint firstItem="ZIy-4q-Ngl" firstAttribute="leading" secondItem="ay4-t6-lux" secondAttribute="leading" id="HxM-na-mnD"/>
                 <constraint firstItem="r7n-CX-lkf" firstAttribute="top" secondItem="q9J-1s-uhq" secondAttribute="bottom" constant="20" id="K4V-Rn-P5O"/>
+                <constraint firstAttribute="bottom" secondItem="ySw-8r-RCS" secondAttribute="bottom" constant="510" id="bee-lp-ZaZ"/>
+                <constraint firstItem="ySw-8r-RCS" firstAttribute="trailing" secondItem="ay4-t6-lux" secondAttribute="trailing" id="l67-Al-xv1"/>
                 <constraint firstItem="r7n-CX-lkf" firstAttribute="leading" secondItem="q9J-1s-uhq" secondAttribute="leading" id="tbZ-h1-Yuz"/>
                 <constraint firstItem="ZIy-4q-Ngl" firstAttribute="top" secondItem="Lar-hk-f7B" secondAttribute="top" id="u7u-fT-1oQ"/>
                 <constraint firstItem="q9J-1s-uhq" firstAttribute="leading" secondItem="ay4-t6-lux" secondAttribute="leading" constant="35" id="yEq-Fo-Tlf"/>
+                <constraint firstItem="ySw-8r-RCS" firstAttribute="leading" secondItem="ay4-t6-lux" secondAttribute="leading" constant="20" id="z4b-cI-niZ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ay4-t6-lux"/>
             <point key="canvasLocation" x="-591.304347826087" y="346.875"/>

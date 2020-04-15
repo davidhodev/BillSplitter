@@ -21,6 +21,8 @@
 		DB3C32E223EF561C0063ECCC /* previousBillsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3C32E123EF561C0063ECCC /* previousBillsCollectionViewCell.swift */; };
 		DB3C32E423EF57620063ECCC /* billModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3C32E323EF57620063ECCC /* billModel.swift */; };
 		DB3C32E623EF59BD0063ECCC /* previousBillsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB3C32E523EF59BD0063ECCC /* previousBillsCollectionViewCell.xib */; };
+		DB5DB2492447907400E3F8FA /* saveView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB5DB2482447907400E3F8FA /* saveView.xib */; };
+		DB5DB24B2447907D00E3F8FA /* saveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5DB24A2447907D00E3F8FA /* saveView.swift */; };
 		DB6044E9243D24E70097F6EB /* splitBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6044E8243D24E70097F6EB /* splitBillViewController.swift */; };
 		DB6044EB243D255E0097F6EB /* splitBillViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB6044EA243D255E0097F6EB /* splitBillViewController.xib */; };
 		DB6044ED243D3F860097F6EB /* addMembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6044EC243D3F860097F6EB /* addMembersViewController.swift */; };
@@ -100,6 +102,8 @@
 		DB3C32E123EF561C0063ECCC /* previousBillsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = previousBillsCollectionViewCell.swift; sourceTree = "<group>"; };
 		DB3C32E323EF57620063ECCC /* billModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = billModel.swift; sourceTree = "<group>"; };
 		DB3C32E523EF59BD0063ECCC /* previousBillsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = previousBillsCollectionViewCell.xib; sourceTree = "<group>"; };
+		DB5DB2482447907400E3F8FA /* saveView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = saveView.xib; sourceTree = "<group>"; };
+		DB5DB24A2447907D00E3F8FA /* saveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = saveView.swift; sourceTree = "<group>"; };
 		DB6044E8243D24E70097F6EB /* splitBillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = splitBillViewController.swift; sourceTree = "<group>"; };
 		DB6044EA243D255E0097F6EB /* splitBillViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = splitBillViewController.xib; sourceTree = "<group>"; };
 		DB6044EC243D3F860097F6EB /* addMembersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addMembersViewController.swift; sourceTree = "<group>"; };
@@ -213,8 +217,8 @@
 				DB9875512436ACA10020539B /* New Bills */,
 				DB98754D2436AC8E0020539B /* settingsViewController.xib */,
 				DBBFECB92436B0DE009AB35C /* previousBillsViewController.swift */,
-				DBF1E8A2244639FD0043C168 /* getReceiptModel.swift */,
 				DBBFECBB2436B108009AB35C /* previousBillsViewController.xib */,
+				DBF1E8A2244639FD0043C168 /* getReceiptModel.swift */,
 				DB98754F2436AC9B0020539B /* settingsViewController.swift */,
 				DB3C32A923EF2B5F0063ECCC /* AppDelegate.swift */,
 				DB3C32AB23EF2B5F0063ECCC /* SceneDelegate.swift */,
@@ -250,10 +254,10 @@
 			isa = PBXGroup;
 			children = (
 				DB3C32DF23EF4F710063ECCC /* homeViewController.swift */,
+				DB3C32DD23EF4A6B0063ECCC /* homeViewController.xib */,
 				DB3C32E123EF561C0063ECCC /* previousBillsCollectionViewCell.swift */,
 				DB3C32E523EF59BD0063ECCC /* previousBillsCollectionViewCell.xib */,
 				DBED72F82432A5F6003DA082 /* emptyPreviousBill.xib */,
-				DB3C32DD23EF4A6B0063ECCC /* homeViewController.xib */,
 				DB3C32E323EF57620063ECCC /* billModel.swift */,
 			);
 			path = "Home View Controller";
@@ -281,6 +285,8 @@
 			children = (
 				DB6044EE243D46A20097F6EB /* splitBillTabBarController.swift */,
 				DBF2D9CA243E535B0032C6DB /* viewBillViewController.swift */,
+				DB5DB2482447907400E3F8FA /* saveView.xib */,
+				DB5DB24A2447907D00E3F8FA /* saveView.swift */,
 				DBF2D9CC243E64FF0032C6DB /* viewBillViewController.xib */,
 				DB6044F0243D46C10097F6EB /* splitTabBarController.xib */,
 				DB6044F6243D520A0097F6EB /* addMemberTableViewCell.swift */,
@@ -426,6 +432,7 @@
 				DBBFECC12436C9F6009AB35C /* itemTableViewCell.xib in Resources */,
 				DBAFA478243D5D28009B8EB4 /* addMemberView.xib in Resources */,
 				DB3C32DE23EF4A6B0063ECCC /* homeViewController.xib in Resources */,
+				DB5DB2492447907400E3F8FA /* saveView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,6 +554,7 @@
 				DB703A7A23F0B80400F98E1D /* newBillViewController.swift in Sources */,
 				DBA3C13A2444F76B00643100 /* viewTableViewHeader.swift in Sources */,
 				DB3C32AC23EF2B5F0063ECCC /* SceneDelegate.swift in Sources */,
+				DB5DB24B2447907D00E3F8FA /* saveView.swift in Sources */,
 				DB9875502436AC9B0020539B /* settingsViewController.swift in Sources */,
 				DB6044E9243D24E70097F6EB /* splitBillViewController.swift in Sources */,
 				DBF1E8A3244639FD0043C168 /* getReceiptModel.swift in Sources */,

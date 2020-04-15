@@ -83,9 +83,24 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B7Q-Rw-UJj">
+                    <rect key="frame" x="41" y="131" width="199" height="44"/>
+                    <attributedString key="attributedText">
+                        <fragment content="Bill Splitter">
+                            <attributes>
+                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="NSFont" size="36" name="Verdana"/>
+                                <font key="NSOriginalFont" size="36" name="Verdana"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
+                <constraint firstItem="z3N-63-6OW" firstAttribute="leading" secondItem="B7Q-Rw-UJj" secondAttribute="leading" constant="-5" id="0WQ-aL-8ky"/>
                 <constraint firstItem="z3N-63-6OW" firstAttribute="trailing" secondItem="gP6-IT-suC" secondAttribute="trailing" id="6Vv-HL-CzX"/>
                 <constraint firstItem="nLr-iY-Qit" firstAttribute="leading" secondItem="Fxj-LG-zR6" secondAttribute="leading" id="6y0-bp-4VR"/>
                 <constraint firstItem="6Lj-9f-ffQ" firstAttribute="leading" secondItem="nLr-iY-Qit" secondAttribute="trailing" constant="12" id="7Wg-HK-sW8"/>
@@ -104,6 +119,7 @@
                 <constraint firstItem="Fxj-LG-zR6" firstAttribute="top" secondItem="asF-o0-7gQ" secondAttribute="bottom" constant="50" id="jpM-Qp-Hcx"/>
                 <constraint firstItem="Sv3-Ha-YBV" firstAttribute="top" secondItem="XuX-6B-bdy" secondAttribute="bottom" constant="20" id="lcX-ve-dR6"/>
                 <constraint firstItem="nLr-iY-Qit" firstAttribute="top" secondItem="XuX-6B-bdy" secondAttribute="bottom" constant="44" id="muh-75-mt9"/>
+                <constraint firstItem="B7Q-Rw-UJj" firstAttribute="top" secondItem="gP6-IT-suC" secondAttribute="top" constant="87" id="pVo-Kv-SNK"/>
                 <constraint firstItem="P4I-2I-qZb" firstAttribute="top" secondItem="NWV-aA-Bva" secondAttribute="top" id="yj8-Gg-Att"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="gP6-IT-suC"/>

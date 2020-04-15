@@ -25,6 +25,7 @@ class homeViewController: UIViewController, UICollectionViewDelegate {
         
         previousBillsCollectionView.delegate = self
         previousBillsCollectionView.dataSource = self
+    
         previousBillsCollectionView.isUserInteractionEnabled = true
         previousBillsCollectionView.register(UINib(nibName: "previousBillsCollectionViewCell", bundle:nil), forCellWithReuseIdentifier: "previousBillsCollectionViewCell")
         previousBillsCollectionView.register(UINib(nibName: "emptyPreviousBill", bundle:nil), forCellWithReuseIdentifier: "emptyPreviousBill")
@@ -34,23 +35,22 @@ class homeViewController: UIViewController, UICollectionViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         previousReceipts.removeAll()
-        var receiptCount = UserDefaults.standard.integer(forKey: "receiptCount")
-        print(receiptCount)
-        for index in 1...(receiptCount){
-            print(index)
-            if let unwrappedData = UserDefaults.standard.data(forKey: "receipts\(index)") {
-                do {
-                    
-                    let items = try JSONDecoder().decode(receiptModel.self, from: unwrappedData)
-
-                    previousReceipts.insert(items, at: 0)
-                    
-                } catch let jsonErr {
-                    print("error", jsonErr)
+        let receiptCount = UserDefaults.standard.integer(forKey: "receiptCount")
+        if receiptCount > 0 {
+            for index in 1...(receiptCount){
+                print(index)
+                if let unwrappedData = UserDefaults.standard.data(forKey: "receipts\(index)") {
+                    do {
+                        let items = try JSONDecoder().decode(receiptModel.self, from: unwrappedData)
+                        previousReceipts.insert(items, at: 0)
+                        
+                    } catch let jsonErr {
+                        print("error", jsonErr)
+                    }
                 }
             }
         }
-        self.previousBillsCollectionView.reloadData()
+    self.previousBillsCollectionView.reloadData()
     }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -99,4 +99,13 @@ extension homeViewController: UICollectionViewDataSource {
         return cell
     }
     
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if previousReceipts.count > 0 {
+            let viewBillVC = viewBillViewController()
+            viewBillVC.receipt = previousReceipts[indexPath.row]
+            viewBillVC.saveAvailable = false
+        self.navigationController?.pushViewController(viewBillVC, animated: true)
+        }
+    }
 }

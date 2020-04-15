@@ -145,21 +145,13 @@ class newBillViewController: UIViewController, G8TesseractDelegate, UIImagePicke
     }
     
     @IBAction func doneButtonPressed(_ sender: Any) {
-        
-    
         if let passedReceipt = self.receipt {
             let tabBarVC = splitBillTabBarController()
             tabBarVC.receipt = passedReceipt
             self.navigationController?.pushViewController(tabBarVC, animated: true)
         }
-        
-        
     }
-    
 }
-//protocol passReceiptDelegate: splitBillTabBarController {
-//    func passReceipt(receipt: receiptModel)
-//}
 
 
 

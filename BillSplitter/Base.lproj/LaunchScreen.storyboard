@@ -21,6 +21,12 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_background" translatesAutoresizingMaskIntoConstraints="NO" id="xYJ-J7-rPk">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circleLogo" translatesAutoresizingMaskIntoConstraints="NO" id="NnZ-GM-w8g">
+                                <rect key="frame" x="-43" y="373" width="500" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="wVs-BT-i5g"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -30,6 +36,8 @@
                             <constraint firstItem="1M9-HZ-RLQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WKr-Fk-Atr"/>
                             <constraint firstAttribute="bottom" secondItem="xYJ-J7-rPk" secondAttribute="bottom" id="be8-vr-ImZ"/>
                             <constraint firstItem="1M9-HZ-RLQ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="cfh-3v-sl1"/>
+                            <constraint firstItem="NnZ-GM-w8g" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="kOS-jE-hNh"/>
+                            <constraint firstItem="NnZ-GM-w8g" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="nPp-ZZ-rgH"/>
                             <constraint firstAttribute="bottom" secondItem="1M9-HZ-RLQ" secondAttribute="bottom" id="xDg-6G-a2K"/>
                             <constraint firstItem="xYJ-J7-rPk" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="zAG-TY-Aw3"/>
                         </constraints>
@@ -42,6 +50,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="circleLogo" width="500" height="495"/>
         <image name="mask" width="375" height="812"/>
         <image name="splash_background" width="375" height="726"/>
     </resources>

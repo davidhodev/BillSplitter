@@ -10,6 +10,7 @@ import Foundation
 class receiptModel: Codable {
     var itemsList: [itemModel]
     var membersList: [memberModel]
+    var restaurantName: String?
     
     init() {
         self.itemsList = []
@@ -24,12 +25,21 @@ class receiptModel: Codable {
     func initWithCoder(aDecoder: NSCoder) -> receiptModel {
         self.itemsList = aDecoder.decodeObject(forKey: "itemsList") as! [itemModel]
         self.membersList = aDecoder.decodeObject(forKey: "membersList") as! [memberModel]
+        if var resName = self.restaurantName {
+            resName = aDecoder.decodeObject(forKey: "restaurant") as! String
+        }
+        
         return self
     }
     
     func encodeWithCoder(aCoder: NSCoder!) {
         aCoder.encode(self.itemsList, forKey: "itemsList")
         aCoder.encode(self.membersList, forKey: "membersList")
+        
+        if let resName = self.restaurantName {
+            aCoder.encode(resName, forKey: "restaurant")
+        }
+        
     }
     
     func getItems() -> [itemModel] {
@@ -95,5 +105,9 @@ class receiptModel: Codable {
             }
             member.amountOwed = amount
         }
+    }
+    
+    func addRestaurant(restaurant: String) {
+        self.restaurantName = restaurant
     }
 }

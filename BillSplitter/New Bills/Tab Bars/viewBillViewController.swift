@@ -9,10 +9,14 @@
 import Foundation
 import UIKit
 
-class viewBillViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class viewBillViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, saveDelegate {
+    
+    
     
     var receipt: receiptModel?
+    var saveAvailable: Bool = true
     let userDefaults = UserDefaults.standard
+    var delegate: saveDelegate?
     
     @IBOutlet weak var viewTableView: UITableView!
     @IBOutlet weak var saveButton: UIButton!
@@ -41,6 +45,15 @@ class viewBillViewController: UIViewController, UITableViewDelegate, UITableView
         
         receipt?.calculateAmountOwed()
         viewTableView.reloadData()
+        
+        if saveAvailable {
+            saveButton.isHidden = false
+        }
+        else {
+            saveButton.isHidden = true
+        }
+        
+        self.delegate = self
     }
     
     @IBAction func backButton(_ sender: Any) {
@@ -96,25 +109,35 @@ class viewBillViewController: UIViewController, UITableViewDelegate, UITableView
         view.backgroundColor = UIColor(red:0.41, green:0.10, blue:0.88, alpha:1.00)
         return view
     }
-    @IBAction func saveButtonPressed(_ sender: Any) {
+    
+    func save(restaurant: String) {
+        self.receipt?.addRestaurant(restaurant: restaurant)
+        
         let encoder = JSONEncoder()
-             if let data = try? encoder.encode(receipt) {
-            let string = String(data: data, encoding: .utf8)!
-            
-            if  (userDefaults.integer(forKey: "receiptCount")) > 0{
-                var newReceiptCount = userDefaults.integer(forKey: "receiptCount")
-                newReceiptCount += 1
-                userDefaults.set(newReceiptCount, forKey: "receiptCount")
-                userDefaults.set(data, forKey: "receipts\(newReceiptCount)")
+                 if let data = try? encoder.encode(receipt) {
+                let string = String(data: data, encoding: .utf8)!
+                
+                if  (userDefaults.integer(forKey: "receiptCount")) > 0{
+                    var newReceiptCount = userDefaults.integer(forKey: "receiptCount")
+                    newReceiptCount += 1
+                    userDefaults.set(newReceiptCount, forKey: "receiptCount")
+                    userDefaults.set(data, forKey: "receipts\(newReceiptCount)")
+                }
+                else {
+                    userDefaults.set(1, forKey: "receiptCount")
+                    userDefaults.set(data, forKey: "receipts1")
+                }
+                userDefaults.synchronize()
+                
             }
-            else {
-                userDefaults.set(1, forKey: "receiptCount")
-                userDefaults.set(data, forKey: "receipts1")
-            }
-            userDefaults.synchronize()
-            
+            self.navigationController?.popToRootViewController(animated: true)
         }
-        self.navigationController?.popToRootViewController(animated: true)
+    
+    @IBAction func saveButtonPressed(_ sender: Any) {
+        let vc = saveView()
+        vc.delegate = self
+        vc.modalPresentationStyle = .popover
+        self.present(vc, animated: true, completion: nil)
     }
     
 }

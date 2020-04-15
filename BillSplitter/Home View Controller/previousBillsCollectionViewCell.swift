@@ -14,21 +14,6 @@ class previousBillsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var restaurantLabel: UILabel!
     @IBOutlet weak var totalPaidLabel: UILabel!
     @IBOutlet weak var amountPaidLabel: UILabel!
-    //    var bill: billModel! {
-//           didSet {
-//               self.updateUI()
-//           }
-//       }
-//
-//
-//       func updateUI() {
-//           if let bill = bill {
-//            restaurantLabel.text = bill.restaurant
-//           }
-//           else {
-//            restaurantLabel.text = nil
-//           }
-//       }
     
     var receipt: receiptModel! {
         didSet {
@@ -39,7 +24,13 @@ class previousBillsCollectionViewCell: UICollectionViewCell {
     
     func updateUI() {
         if let receipt = receipt {
-            restaurantLabel.text = "Text"
+            if let resName = receipt.restaurantName {
+                restaurantLabel.text = receipt.restaurantName
+            }
+            else {
+                restaurantLabel.text = "Unavailable"
+            }
+            
             amountPaidLabel.text = String(format: "$%.2f", receipt.getMembers()[0].amountOwed)
             
             var totalPaid: Double = 0

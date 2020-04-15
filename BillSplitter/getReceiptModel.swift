@@ -16,6 +16,7 @@ struct Item {
 struct getReceiptModel: Codable {
     let itemsList: [itemModel]
     let membersList: [memberModel]
+    let restaurant: String
     
 }
      
